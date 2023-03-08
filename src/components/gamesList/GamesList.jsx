@@ -1,6 +1,6 @@
 const GamesList = () => {
     return ( 
-        <main className="gam">
+        <main className="gamesList">
 
             <h1>GamesList</h1>
 

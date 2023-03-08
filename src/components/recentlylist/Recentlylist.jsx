@@ -1,7 +1,10 @@
-const Recentlylist = () => {
+const RecentlyList = () => {
     return ( 
-        <h1>recentlylist</h1>
+        <main className="recentlyList">
+
+            <h1>recentlylist</h1>
+        </main>
     );
 }
 
-export default Recentlylist;
+export default RecentlyList;

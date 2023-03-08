@@ -1,6 +1,9 @@
 const TopGamesBrowser = () => {
     return ( 
-        <h1>Top Games Browser</h1>
+        <section className="TopGamesBrowser">
+
+            <h1>Top Games Browser</h1>
+        </section>
      );
 }
  
