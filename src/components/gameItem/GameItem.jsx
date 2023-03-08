@@ -17,7 +17,7 @@ const GameItem = () => {
             <button>Link To Show More</button>
             <p> </p>            {/* p Tag zum Stylen vom Strich */}
             </article>
-            
+
             <article>
                 <button>Win</button>
                 <button>1. </button>

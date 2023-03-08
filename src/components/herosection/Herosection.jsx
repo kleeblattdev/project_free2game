@@ -1,7 +1,10 @@
-const Herosection = () => {
+const HeroSection = () => {
     return ( 
-        <h1>Herosection Titelbild</h1>
+        <section className="heroSection">
+            <h1>Herosection Titelbild</h1>
+
+        </section>
      );
 }
 
-export default Herosection
+export default HeroSection
