@@ -1,18 +1,17 @@
 @import "../../variables.scss";
 
-.gameItem{
-    
+.gameItemNoDescription{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 17.8rem;
-    height: 37rem;
+    height: 25rem;
     background-color: $colorMidnightBlue;
     border-radius: 10px;
 
     .platformGenreSection{
 
-        height: 10rem;
+        height: 5rem;
 
         .platformLogo{
             width: 2rem;
@@ -51,6 +50,7 @@
         border-radius: 10px;
         width: 45%;
         text-align: center;
+        
     }
 
 
@@ -62,6 +62,4 @@
             border-top-left-radius: 10px;
             margin-bottom: .5rem;
         }
-    
-
 }

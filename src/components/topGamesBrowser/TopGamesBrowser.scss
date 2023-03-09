@@ -1,3 +1,21 @@
+@import '../../variables.scss';
+
 .topGamesBrowser{
+
     
+    .recentBrowserGameContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+    }
+        button{
+        width: 7rem;
+        padding: .5rem;
+        margin-left: auto;
+        color: $colorWhite;
+        border-radius: 10px;
+        background-color: $colorRed;
+        cursor: pointer;
+        }
 }

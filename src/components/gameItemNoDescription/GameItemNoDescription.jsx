@@ -1,22 +1,21 @@
-import "./GameItem.scss"
+import "./GameItemNoDescription.scss"
 import { Link } from "react-router-dom";
 import windowsLogo from "../../image/windows_Logo.png"
 import browserLogo from "../../image/browser_Logo.png"
+import "./GameItemNoDescription.scss"
 
-
-const GameItem = (props) => {
+const GameItemNoDescription = (props) => {
     return ( 
-        <section className="gameItem">
+
+        <section className="gameItemNoDescription">
             
-            <img src={props.img} alt={props.title}/>
+        <img src={props.img} alt={props.title}/>
 
-            <article className="gameCard">
+        <article className="gameCard">
 
-            <h3>{props.title}</h3>
-            <p>{props.description}</p>
-            <Link className="readMoreLink" to={`/detailview/${props.id}`}>Read More</Link>
-            {/* <p> </p>   */}          {/* p Tag zum Stylen vom Strich */}
-            </article>
+        <h3>{props.title}</h3>
+        <Link className="readMoreLink" to={`/detailview/${props.id}`}>Read More</Link>
+        </article>
 
        <article>
 
@@ -30,4 +29,4 @@ const GameItem = (props) => {
      );
 }
  
-export default GameItem;
+export default GameItemNoDescription;

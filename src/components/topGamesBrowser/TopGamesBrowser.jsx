@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react";
-import GameItem from "../gameItem/GameItem";
+import GameItemNoDescription from "../gameItemNoDescription/GameItemNoDescription";
 import { v4 as uuidv4 } from 'uuid';
+import "./TopGamesBrowser.scss";
 
 const TopGamesBrowser = () => {
     
@@ -8,23 +9,23 @@ const TopGamesBrowser = () => {
     const [limiter,setLimiter] = useState(4)
 
     useEffect(() => {
-        fetch(`https://www.freetogame.com/api/games?platform=browser&sort-by=release-date&platform=all`)
+        fetch(`https://www.freetogame.com/api/games?platform=browser&sort-by=release-date&platform=browser`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
             setRecentData(data.slice(0,limiter))
         })
     },[limiter])
-    /* test git */
+    
     
     return ( 
+            
         <section className="topGamesBrowser">
 
-            <h3>Top 4 recent Games for Browser</h3>
             <div className="recentBrowserGameContainer">
                 {recentData?.map((item) => {
                     return(
-                    <GameItem 
+                    <GameItemNoDescription
                     img={item.thumbnail}
                     title={item.title}
                     platform={item.platform}
@@ -35,6 +36,7 @@ const TopGamesBrowser = () => {
 
             </div>
 
+            <button onClick={() => setLimiter(limiter + 4)}>SHOW MORE</button>
 
         </section>
      );
