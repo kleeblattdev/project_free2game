@@ -25,7 +25,7 @@ const RecentlyList = () => {
         <main className="recentlyList">
 
         <p>Recently Added</p>
-        <section>
+        <section className="recentlyListContainer">
             {recentData?.map((item) => {
                 console.log(item)
                     return(
@@ -33,6 +33,7 @@ const RecentlyList = () => {
                         img={item.thumbnail}
                         title={item.title}
                         description={item.short_description}
+                        platform={item.platform}
                         id={item.id}
                         key={uuidv4()}
                         />
