@@ -14,42 +14,49 @@ transition: 0.5s;
 background-color: $colorBlack;
 width: 70px;
 
-    .closeBtn{
-    display: none;
-    background-image: url("../../image/BurgerIconClose.svg");
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top:-5px;
-    right: 25px;
-    margin-left: 50px;
-    cursor: pointer;
-    } 
-
-    .hamburgerButton {
-        cursor: pointer;
-        top: 30px;
+    #menuContainer{
+        position: relative;
+        top: -300px;
         left: 20px;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        .menuButton,
+        .menuButton::before,
+        .menuButton::after {
+            background-color: $colorWhite;
+            position: absolute;
+            height: 2px;
+            width: 30px;
+            border-radius: 2px;
+            }
+        
+        .menuButton::before {
+            content: '';
+            margin-top: -8px;
+            }
+            
+        .menuButton::after {
+            content: '';
+            margin-top: 8px;
         }
 
-    .hamburgerButton,
-    .hamburgerButton::before,
-    .hamburgerButton::after {
-        background-color: #fff;
-        position: absolute;
-        height: 2px;
-        width: 30px;
-        border-radius: 2px;
-        }
-    
-    .hamburgerButton::before {
-        content: '';
-        margin-top: -8px;
-        }
-        
-    .hamburgerButton::after {
-        content: '';
-        margin-top: 8px;
+        .closeBtn{
+            display: none;
+            background-image: url("../../image/BurgerIconClose.svg");
+            background-position: center;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 60px;
+            margin-left: 50px;
+            cursor: pointer;
+            } 
     }
 
     #home{
