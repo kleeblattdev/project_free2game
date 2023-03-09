@@ -1,7 +1,7 @@
 import "./GameItem.scss"
 import { Link } from "react-router-dom";
-import windowsLogo from "../../image/Logos_Plattform/windows_logo.png"
-import browserLogo from "../../image/Logos_Plattform/browser_Logo.png"
+import windowsLogo from "../../image/windows_logo.png"
+import browserLogo from "../../image/browser_Logo.png"
 
 
 const GameItem = (props) => {
