@@ -8,7 +8,7 @@ const GameItem = (props) => {
     return ( 
         <section className="gameItem">
             
-            <img src={props.img} alt="Game Img" />
+            <img src={props.img} alt={props.title}/>
 
             <article className="gameCard">
 

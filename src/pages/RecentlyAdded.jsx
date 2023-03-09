@@ -1,10 +1,17 @@
-/* library import */
-import {useState, useEffect} from "react"
-import { v4 as uuidv4 } from 'uuid'
+
+/* component import */
+import Herosection from "../components/herosection/Herosection";
+
+import Recentlylist from "../components/recentlylist/Recentlylist"
+
 
 const RecentlyAdded = () => {
+
     return ( 
-        <h1>RecentlyAdded-Test</h1>
+        <main>
+            <Herosection/>
+            <Recentlylist/>
+        </main>
     );
 }
 
