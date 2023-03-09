@@ -1,6 +1,6 @@
 const DetailView = () => {
     return ( 
-        <h1>DetailView</h1>
+        <h1>Test-DetailView</h1>
      );
 }
  
