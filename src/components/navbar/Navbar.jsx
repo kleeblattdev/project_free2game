@@ -1,7 +1,14 @@
+//components import
+import HamburgerButton from "./HamburgerButton"
+import NavButton from "./NavButton"
+
 const Navbar = () => {
     return ( 
         <nav className="navBar">
-            <h1>navbar</h1>
+            <HamburgerButton/>
+            <NavButton/>
+            <NavButton/>
+            <NavButton/>
         </nav>
     );
 }

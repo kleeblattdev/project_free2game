@@ -1,6 +1,5 @@
-import "./NavGameButton.scss";
-
-
+/* import SCSS */
+import "./NavButton.scss";
 
 
 const NavGameButton = () => {
@@ -10,5 +9,5 @@ const NavGameButton = () => {
         </section>
     );
 }
- 
+
 export default NavGameButton;
