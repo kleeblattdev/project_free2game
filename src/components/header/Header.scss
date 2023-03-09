@@ -1,3 +1,22 @@
-.header{
-    
+/* import scss */
+@import "../../variables.scss";
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 1vh;
+    input[type="search"]{
+        border: none;
+        background-color: $colorGrey;
+        background-image: url("../../image/search.svg");
+        background-position: right;
+        background-repeat: no-repeat;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
 }
+
