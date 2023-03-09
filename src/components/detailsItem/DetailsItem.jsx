@@ -8,54 +8,57 @@ const DetailsItem = (props) => {
     return (
         <main className="detailsItem">
 
-            <img src="screenshots[0].image" alt="   header bild" />   {/* // ! map 2 ins erste objekt rein ? */}
-            <h1>title</h1>
+            <article>
+                {/* // !   "" weg bei src s überall auch unten */}
+                <img src="{props.screenshots[0].image}" alt="header Bild von ${props.title}" />
+                <h1>{props.title}</h1>
+            </article>
 
             <article>
-                <img src="thumbnail" alt="   bild links " />
-                <h2>platform</h2>
-                <p>genre</p>
+                <img src="{props.thumbnail}" alt="SBild links" />
+                <h2>{props.platform}</h2>
+                <p>{props.genre}</p>
 
-                <a href="https://www.freetogame.com/call-of-duty-warzone" target={"_blank"}>
+                <a href="{props.freetogame_profile_url}" target={"_blank"}>
                     <button> play Now </button>
                 </a>
             </article>
 
             <article>
                 <h2>About</h2>
-                <p>description</p>
+                <p>{props.description}</p>
             </article>
 
             <article>
-                <img src="screenshots[1].image" alt="" />
+                <img src="{props.screenshots[1].image}" alt="" />
             </article>
 
             <article>
-                <img src="screenshots[2].image" alt="" />
+                <img src="{props.screenshots[2].image}" alt="" />
             </article>
 
             <article>
                 <h2>Additional Information</h2>
                 <p>Please note this free-to-play game may or may not offer optional in-game purchases.</p>
-                <h3>Developer    </h3> <p>developer</p>
-                <h3>Publisher   </h3> <p>publisher</p>
-                <h3>Release Date    </h3> <p>release_date</p>
+                <h3>Developer    </h3> <p>{props.developer}</p>
+                <h3>Publisher   </h3> <p>{props.publisher}</p>
+                <h3>Release Date    </h3> <p>{props.release_date}</p>
             </article>
 
             <article>
                 <h2>Minimum System Requirements (Windows) </h2>
                 <h3>OS</h3>
-                <p>minimum_system_requirements.os</p>
+                <p>props.minimum_system_requirements.os</p>
                 <h3>Memory</h3>
-                <p>minimum_system_requirements.memory</p>
+                <p>props.minimum_system_requirements.memory</p>
                 <h3>Storage</h3>
-                <p>minimum_system_requirements.storage</p>
+                <p>props.minimum_system_requirements.storage</p>
                 <h3>Processor</h3>
-                <p>minimum_system_requirements-processor</p>
+                <p>props.minimum_system_requirements-processor</p>
                 <h3>Graphics</h3>
-                <p>minimum_system_requirements.graphics</p>
+                <p>props.minimum_system_requirements.graphics</p>
                 <h3>Additional Notes</h3>
-                <p>Specifications may change during development</p>
+                <p>props.Specifications may change during development</p>
             </article>
 
 

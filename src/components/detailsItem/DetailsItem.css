@@ -3,4 +3,7 @@
 */
 .detailsItem h1 {
   color: #FF4654;
+}
+.detailsItem img {
+  border-radius: 1.5rem;
 }/*# sourceMappingURL=DetailsItem.css.map */
