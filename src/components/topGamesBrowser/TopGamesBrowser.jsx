@@ -15,6 +15,7 @@ const TopGamesBrowser = () => {
             setRecentData(data.slice(0,limiter))
         })
     },[limiter])
+    /* test git */
     
     return ( 
         <section className="topGamesBrowser">
