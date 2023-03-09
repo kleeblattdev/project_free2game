@@ -12,7 +12,7 @@ const TopGamesBrowser = () => {
         fetch(`https://www.freetogame.com/api/games?platform=browser&sort-by=release-date&platform=browser`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            /* console.log(data) */
             setRecentData(data.slice(0,limiter))
         })
     },[limiter])
@@ -22,14 +22,17 @@ const TopGamesBrowser = () => {
             
         <section className="topGamesBrowser">
 
+            <p>Top recent Browser Games</p>
             <div className="recentBrowserGameContainer">
                 {recentData?.map((item) => {
+                    console.log(item.genre)
                     return(
                     <GameItemNoDescription
                     img={item.thumbnail}
                     title={item.title}
                     platform={item.platform}
                     id={item.id}
+                    genre={item.genre}
                     key={uuidv4()}
                     />)
                 })}

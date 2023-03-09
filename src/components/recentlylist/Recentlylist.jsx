@@ -13,7 +13,7 @@ const RecentlyList = () => {
         fetch(`https://www.freetogame.com/api/games?&sort-by=release-date?&platform=all`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            /* console.log(data) */
             setRecentData(data.slice(0,limiter))
             
         })
@@ -27,7 +27,7 @@ const RecentlyList = () => {
         <p>Recently Added</p>
         <section className="recentlyListContainer">
             {recentData?.map((item) => {
-                /* console.log(item) */
+                /* console.log(item.genre) */
                     return(
                         <GameItem 
                         img={item.thumbnail}
@@ -35,6 +35,7 @@ const RecentlyList = () => {
                         description={item.short_description}
                         platform={item.platform}
                         id={item.id}
+                        genre={item.genre}
                         key={uuidv4()}
                         />
                     )
