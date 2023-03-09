@@ -10,16 +10,16 @@ const DetailsItem = (props) => {
 
             <article>
                 {/* // !   "" weg bei src s überall auch unten */}
-                <img src="{props.screenshots[0].image}" alt="header Bild von ${props.title}" />
+                <img src={props.imgEins} alt="header Bild von ${props.title}" />
                 <h1>{props.title}</h1>
             </article>
 
             <article>
-                <img src="{props.thumbnail}" alt="SBild links" />
+                <img src={props.thumbnail} alt="SBild links" />
                 <h2>{props.platform}</h2>
                 <p>{props.genre}</p>
 
-                <a href="{props.freetogame_profile_url}" target={"_blank"}>
+                <a href={props.url} target={"_blank"}>
                     <button> play Now </button>
                 </a>
             </article>
@@ -30,27 +30,30 @@ const DetailsItem = (props) => {
             </article>
 
             <article>
-                <img src="{props.screenshots[1].image}" alt="" />
+                <img src={props.imgZwei} alt="" />
             </article>
 
             <article>
-                <img src="{props.screenshots[2].image}" alt="" />
+                <img src={props.imgDrei} alt="" />
             </article>
 
             <article>
                 <h2>Additional Information</h2>
                 <p>Please note this free-to-play game may or may not offer optional in-game purchases.</p>
-                <h3>Developer    </h3> <p>{props.developer}</p>
-                <h3>Publisher   </h3> <p>{props.publisher}</p>
-                <h3>Release Date    </h3> <p>{props.release_date}</p>
+                <h3>Developer    </h3>
+                <p>{props.developer}</p>
+                <h3>Publisher   </h3>
+                <p>{props.publisher}</p>
+                <h3>Release Date    </h3>
+                <p>{props.release_date}</p>
             </article>
 
             <article>
                 <h2>Minimum System Requirements (Windows) </h2>
                 <h3>OS</h3>
-                <p>props.minimum_system_requirements.os</p>
+                <p>{props.os}</p>
                 <h3>Memory</h3>
-                <p>props.minimum_system_requirements.memory</p>
+                <p>{props.memory}</p>
                 <h3>Storage</h3>
                 <p>props.minimum_system_requirements.storage</p>
                 <h3>Processor</h3>
