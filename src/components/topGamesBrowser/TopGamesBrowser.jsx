@@ -8,7 +8,7 @@ const TopGamesBrowser = () => {
     const [limiter,setLimiter] = useState(4)
 
     useEffect(() => {
-        fetch(`https://www.freetogame.com/api/games?platform=browser&sort-by=release-date`)
+        fetch(`https://www.freetogame.com/api/games?platform=browser&sort-by=release-date&platform=all`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
