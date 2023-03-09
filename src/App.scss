@@ -1,6 +1,7 @@
 /* font-family
 font-family: 'Oswald', sans-serif;
 font-family: 'Titillium Web', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
  */
 
 @font-face {
@@ -11,6 +12,11 @@ font-family: 'Titillium Web', sans-serif;
 @font-face {
     font-family: 'Titillium Web';
     src: url(./fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(./fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf);
 }
 
 /* Varibales import */
@@ -50,4 +56,11 @@ h3{
 p{
     font-family: 'Titillium Web', sans-serif;
     font-size: 1rem;
+}
+
+a{  
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: $colorWhite;
 }

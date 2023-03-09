@@ -1,12 +1,18 @@
+/* library import */
+import { Link } from "react-router-dom"
+
 /* import SCSS */
 import "./NavButton.scss";
 
 
-const NavGameButton = () => {
+const NavGameButton = ({link, icon, text}) => {
+    function handleClick(){
+        /* document.querySelector(".navButton").classList.add("redBg"); */
+    }
+
     return ( 
-        <section className="navButton">
-            <h1>NavGameButton</h1>
-        </section>
+        <Link to={link} className="navButton" id={icon} onClick={handleClick}><span>{text}
+            </span></Link>
     );
 }
 
