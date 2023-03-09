@@ -27,7 +27,7 @@ const RecentlyList = () => {
         <p>Recently Added</p>
         <section className="recentlyListContainer">
             {recentData?.map((item) => {
-                console.log(item)
+                /* console.log(item) */
                     return(
                         <GameItem 
                         img={item.thumbnail}
