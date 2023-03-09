@@ -3,6 +3,51 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Titillium Web', sans-serif;
  */
 
-/* color-scheme
-#FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
-*/
+@font-face {
+    font-family: 'Oswald';
+    src: url(./fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url(./fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+/* Varibales import */
+@import "./variables.scss";
+
+/* Global Style */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $colorBlack;
+    color: $colorWhite;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-variation-settings: 800;
+    font-size: 3rem;
+}
+
+h2{
+    font-family: 'Oswald', sans-serif;
+    font-variation-settings: 800;
+    font-size: 1.5rem;
+}
+
+h3{
+    font-family: 'Oswald', sans-serif;
+    font-variation-settings: 800;
+    font-size: 1.1rem;
+}
+
+p{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+}

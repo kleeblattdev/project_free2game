@@ -1,10 +1,15 @@
 /* library import */
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+
 /* pages import */
 import Home from "./pages/Home"
 import AllGames from "./pages/AllGames"
 import RecentlyAdded from "./pages/RecentlyAdded"
 import DetailView from "./pages/DetailView"
+
+/* component import */
+import Navbar from "./components/navbar/Navbar"
+import Header from "./components/header/Header"
 
 /* SCSS import */
 import "./App.scss"
@@ -16,9 +21,11 @@ function App() {
     <div className="App">
       <h4>Test von der App.jsx</h4>
       <BrowserRouter>
+      <Header/>
+      <Navbar/>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/allgames' element={<AllGames />} />
+        <Route path='/' element={<Home />}/>
+        <Route path='/allgames' element={<AllGames />}/>
         <Route path='/recentlyadded' element={<RecentlyAdded />}/>
         <Route path='/detailview/:id' element={<DetailView />}/>
       </Routes>

@@ -1,6 +1,19 @@
+import DetailsItem from "../components/detailsItem/DetailsItem";
+
+
+
+
+
 const DetailView = () => {
     return ( 
-        <h1>Test-DetailView</h1>
+        <section>
+        <h1>DetailView</h1>
+        <DetailsItem 
+                    name="Name"
+        >
+
+        </DetailsItem>
+        </section>
      );
 }
  
