@@ -14,7 +14,7 @@ const TopGamesBrowser = () => {
             console.log(data)
             setRecentData(data.slice(0,limiter))
         })
-    },[])
+    },[limiter])
     
     return ( 
         <section className="topGamesBrowser">
