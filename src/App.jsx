@@ -19,7 +19,6 @@ function App() {
 
   return (
     <div className="App">
-      <h4>Test von der App.jsx</h4>
       <BrowserRouter>
       <Header/>
       <Navbar/>
@@ -30,7 +29,6 @@ function App() {
         <Route path='/detailview/:id' element={<DetailView />}/>
       </Routes>
       </BrowserRouter>
-
     </div>
   )
 }
