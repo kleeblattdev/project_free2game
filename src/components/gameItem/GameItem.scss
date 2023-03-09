@@ -1,7 +1,28 @@
+@import "../../variables.scss";
+
 .gameItem{
+    display: flex;
+    width: 25vw;
+
 
     h1 {
-        color: red;
+        color: $colorWhite;
     }
+
+    .readMoreLink{
+        color: $colorWhite;
+        text-decoration: none;
+        background-color: $colorRed;
+        padding: .5rem;
+    }
+    p{
+        margin-bottom: 1rem;
+    }
+;
+
+        img{
+            width: 25vw;
+        }
+    
 
 }

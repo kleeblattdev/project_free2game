@@ -1,6 +1,8 @@
 import { useState,useEffect } from "react";
 import GameItem from "../gameItem/GameItem"
 import { v4 as uuidv4 } from 'uuid';
+import "./Recentlylist.scss"
+
 
 const RecentlyList = () => {
 
@@ -15,15 +17,15 @@ const RecentlyList = () => {
             setRecentData(data.slice(0,limiter))
             
         })
-    },[])
+    },[limiter])
 
 
 
     return ( 
         <main className="recentlyList">
 
-            <h1>recentlylist</h1>
 
+        <section>
             {recentData?.map((item) => {
                 console.log(item)
                     return(
@@ -37,10 +39,10 @@ const RecentlyList = () => {
                     
                 })
             
-            
             }
+        </section>
 
-            
+            <button onClick={() => setLimiter(limiter + 4)}>SHOW MORE</button>
             
         </main>
     );

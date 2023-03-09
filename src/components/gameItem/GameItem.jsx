@@ -1,5 +1,5 @@
 import "./GameItem.scss"
-
+import { Link } from "react-router-dom";
 
 
 const GameItem = (props) => {
@@ -7,23 +7,21 @@ const GameItem = (props) => {
         <section className="gameItem">
             
 
-            <article>
+            <article className="gameCard">
             <img src={props.img} alt="Game Img" />
-            </article>
 
-            <article>
             <h1>{props.title}</h1>
             <p>{props.description}</p>
-            <button>Link To Show More</button>
+            <Link className="readMoreLink" to={`/detailview/${props.id}`}>Read More</Link>
             <p> </p>            {/* p Tag zum Stylen vom Strich */}
             </article>
 
-            <article>
+{/*             <article>
                 <button>Win</button>
                 <button>1. </button>
                 <button>2.</button>
             </article>
-
+ */}
         </section>
      );
 }
