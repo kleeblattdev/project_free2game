@@ -8,6 +8,7 @@ const DetailsItem = (props) => {
         <main className="detailsItem">
 
             <h1>Detailsschablone</h1>
+            
 
         </main>
     );
