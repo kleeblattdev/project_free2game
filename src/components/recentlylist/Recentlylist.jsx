@@ -10,10 +10,10 @@ const RecentlyList = () => {
     const [limiter,setLimiter] = useState(4)
 
     useEffect(() => {
-        fetch(`https://www.freetogame.com/api/games?&sort-by=release-date`)
+        fetch(`https://www.freetogame.com/api/games?&sort-by=release-date?&platform=pc`)
         .then(res => res.json())
         .then(data => {
-            
+            console.log(data)
             setRecentData(data.slice(0,limiter))
             
         })

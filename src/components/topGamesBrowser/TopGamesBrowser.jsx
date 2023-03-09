@@ -1,20 +1,38 @@
 import { useState,useEffect } from "react";
 import GameItem from "../gameItem/GameItem";
+import { v4 as uuidv4 } from 'uuid';
 
 const TopGamesBrowser = () => {
     
+    const [recentData, setRecentData] = useState([])
+    const [limiter,setLimiter] = useState(4)
+
     useEffect(() => {
         fetch(`https://www.freetogame.com/api/games?platform=browser&sort-by=release-date`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            setRecentData(data.slice(0,limiter))
         })
     },[])
     
     return ( 
         <section className="topGamesBrowser">
 
-            <h1>Top 4 Games for Browser in March 2023</h1>
+            <h3>Top 4 recent Games for Browser</h3>
+            <div className="recentBrowserGameContainer">
+                {recentData?.map((item) => {
+                    return(
+                    <GameItem 
+                    img={item.thumbnail}
+                    title={item.title}
+                    platform={item.platform}
+                    id={item.id}
+                    key={uuidv4()}
+                    />)
+                })}
+
+            </div>
 
 
         </section>
