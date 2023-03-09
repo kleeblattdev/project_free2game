@@ -1,6 +1,6 @@
 const RecentlyAdded = () => {
     return ( 
-        <h1>RecentlyAdded</h1>
+        <h1>RecentlyAdded-Test</h1>
      );
 }
  
