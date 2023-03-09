@@ -2,8 +2,22 @@
 
 .gameItem{
     display: flex;
-    width: 25vw;
+    width: 20vw;
 
+
+    .gameCard{
+            background-color: $colorMidnightBlue;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+
+            h3{
+                text-align: center;
+            }
+    }
 
     h1 {
         color: $colorWhite;
@@ -14,6 +28,7 @@
         text-decoration: none;
         background-color: $colorRed;
         padding: .5rem;
+        border-radius: 10px;
     }
     p{
         margin-bottom: 1rem;
@@ -21,7 +36,11 @@
 ;
 
         img{
-            width: 25vw;
+            width: 100%;
+            height: 10rem;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            margin-bottom: 1rem;
         }
     
 
