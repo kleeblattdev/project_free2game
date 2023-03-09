@@ -2,6 +2,7 @@
 font-family: 'Oswald', sans-serif;
 font-family: 'Titillium Web', sans-serif;
  */
+
 @font-face {
     font-family: 'Oswald';
     src: url(./fonts/Oswald/Oswald-VariableFont_wght.ttf);
@@ -12,16 +13,8 @@ font-family: 'Titillium Web', sans-serif;
     src: url(./fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
 }
 
-/* color-scheme
-#FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
-*/
-
-$colorRed: #FF4654;
-$colorBlack: #040F14;
-$colorMidnightBlue: #102130;
-$colorGrey: #375470;
-$colorDove: #AFC7DF;
-$colorWhite: #FFFFFF;
+/* Varibales import */
+@import "./variables.scss";
 
 /* Global Style */
 
@@ -29,6 +22,11 @@ $colorWhite: #FFFFFF;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    background-color: $colorBlack;
+    color: $colorWhite;
 }
 
 h1{
