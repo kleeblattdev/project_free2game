@@ -8,7 +8,7 @@ const DetailsItem = (props) => {
     return (
         <main className="detailsItem">
 
-            <img src="screenshots[0].image" alt="   header bild" />   {/* // ! ins erste objekt rein ? */}
+            <img src="screenshots[0].image" alt="   header bild" />   {/* // ! map 2 ins erste objekt rein ? */}
             <h1>title</h1>
 
             <article>
@@ -27,11 +27,11 @@ const DetailsItem = (props) => {
             </article>
 
             <article>
-            <img src="screenshots[0].image" alt="" />    {/* // ! ins zweite objekt rein ? */}
+                <img src="screenshots[1].image" alt="" />
             </article>
 
             <article>
-            <img src="screenshots[0].image" alt="" />    {/* // ! ins dritte objekt rein ? */}
+                <img src="screenshots[2].image" alt="" />
             </article>
 
             <article>
