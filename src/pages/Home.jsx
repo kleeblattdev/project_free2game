@@ -1,14 +1,12 @@
-/* library import */
-import {useState, useEffect} from "react"
+import RecentlyList from "../components/recentlylist/Recentlylist";
 
 const Home = () => {
-
     return ( 
-        <main>
-            
-        </main>
+        <div>
+            <h1>Home</h1>
+            <RecentlyList />
+        </div>
+    )}
 
-    );
-}
 
 export default Home;
