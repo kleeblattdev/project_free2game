@@ -1,5 +1,7 @@
 import "./GameItem.scss"
 import { Link } from "react-router-dom";
+import windowsLogo from "../../image/Logos_Plattform/windows_logo.png"
+import browserLogo from "../../image/Logos_Plattform/browser_Logo.png"
 
 
 const GameItem = (props) => {
@@ -19,8 +21,12 @@ const GameItem = (props) => {
        <article>
 
         </article>
-        <p>{props.platform}</p>
-        <img src={props.platform === "PC (Windows)" ? console.log("image PC") : console.log("image andere platform")} alt="" />
+        <section className="platformGenreSection">
+        {/* sets img src to platform logo */}
+        {/* logos unscharf  */}
+        <img className="platformLogo" src={props.platform === "PC (Windows)" ? windowsLogo : browserLogo} alt="" />
+
+        </section>
         </section>
      );
 }

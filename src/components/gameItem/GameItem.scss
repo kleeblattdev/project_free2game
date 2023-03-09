@@ -9,6 +9,17 @@
     height: 37rem;
     background-color: $colorMidnightBlue;
     border-radius: 10px;
+
+    .platformGenreSection{
+
+        height: 10rem;
+
+        .platformLogo{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
     
 
     .gameCard{
