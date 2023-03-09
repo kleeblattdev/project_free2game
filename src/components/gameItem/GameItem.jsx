@@ -2,18 +2,18 @@ import "./GameItem.scss"
 
 
 
-const GameItem = () => {
+const GameItem = (props) => {
     return ( 
         <section className="gameItem">
-            <h1>GameItem - Schablone</h1>
+            
 
             <article>
-            <img src="" alt="Game Img" />
+            <img src={props.img} alt="Game Img" />
             </article>
 
             <article>
-            <h1>Titel</h1>
-            <p>Description</p>
+            <h1>{props.title}</h1>
+            <p>{props.description}</p>
             <button>Link To Show More</button>
             <p> </p>            {/* p Tag zum Stylen vom Strich */}
             </article>
