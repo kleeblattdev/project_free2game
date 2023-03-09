@@ -1,6 +1,6 @@
 const AllGames = () => {
     return ( 
-        <h1>AllGames</h1>
+        <h1>Test-AllGames</h1>
 
      );
 }
