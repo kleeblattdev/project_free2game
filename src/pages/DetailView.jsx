@@ -1,9 +1,10 @@
-import DetailsItem from "../components/detailsItem/DetailsItem";
-
-// import uuid
+// library import
 import { v4 as uuidv4 } from "uuid";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
+/* component import */
+import DetailsItem from "../components/detailsItem/DetailsItem";
 
 
 

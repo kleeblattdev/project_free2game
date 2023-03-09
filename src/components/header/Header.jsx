@@ -13,6 +13,7 @@ const Header = () => {
     
     function searchGame(event){
         setSearchTerm(event.target.value)
+        console.log(searchTerm)
     }
 
     return ( 

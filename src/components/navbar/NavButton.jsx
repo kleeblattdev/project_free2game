@@ -11,8 +11,10 @@ const NavGameButton = ({link, icon, text}) => {
     }
 
     return ( 
-        <Link to={link} className="navButton" id={icon} onClick={handleClick}><span>{text}
-            </span></Link>
+        <>
+        <Link to={link} className="navButton" id={icon} onClick={handleClick}><p>{text}
+            </p></Link>
+        </>
     );
 }
 

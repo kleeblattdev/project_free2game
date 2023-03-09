@@ -12,37 +12,65 @@ z-index: 1;
 overflow-x: hidden;
 transition: 0.5s;
 background-color: $colorBlack;
+width: 70px;
 
-    .hamburgerButton{
-    display: block;
-    position: absolute;
-    top:0;
+    .closeBtn{
+    display: none;
+    background-image: url("../../image/BurgerIconClose.svg");
     width: 50px;
     height: 50px;
-    background-image: url("../../image/BurgerIcon.svg");
-    }
-    .closeBtn{
-        display: none;
-        background-image: url("../../image/BurgerIconClose.svg");
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        top:0;
-        right: 25px;
-        margin-left: 50px;
+    position: absolute;
+    top:-5px;
+    right: 25px;
+    margin-left: 50px;
+    cursor: pointer;
+    } 
+
+    .hamburgerButton {
+        cursor: pointer;
+        top: 30px;
+        left: 20px;
         }
+
+    .hamburgerButton,
+    .hamburgerButton::before,
+    .hamburgerButton::after {
+        background-color: #fff;
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        border-radius: 2px;
+        }
+    
+    .hamburgerButton::before {
+        content: '';
+        margin-top: -8px;
+        }
+        
+    .hamburgerButton::after {
+        content: '';
+        margin-top: 8px;
+    }
 
     #home{
         background-image: url("../../image/home.svg");
     }
-    
     #games{
         background-image: url("../../image/games.svg");
     }
-    
     #recent{
         background-image: url("../../image/recentlyadded.svg");
     }
 
+    .verticalLine{
+        background-color: $colorWhite;
+        width: 1px;
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 70px;
+        z-index: 1;
+        transition: 0.5s;
+    }
 }
 

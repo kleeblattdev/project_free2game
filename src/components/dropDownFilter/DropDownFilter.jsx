@@ -1,9 +1,18 @@
-const DropDownFilter = () => {
-    return ( 
-        <section className="dropDownFilter">
-            <h1>Dropdown Filter</h1>
+/* SCSS import */
+import "./DropDownFilter.scss"
 
-        </section>
+const DropDownFilter = () => {
+    function dropDown(){
+        document.getElementById(dropDownPlatform).classList.toggle("show");
+    }
+    return ( 
+        <select className="dropDownFilter" id="platform" name="platform">
+            <label for="platform">Platform</label>
+            <button onClick={dropDown}></button>
+                <option value="all">All Plattforms</option>
+                <option value="pc">Windows (PC)</option>
+                <option value="browser">Browser (Web)</option>
+        </select>
     );
 }
 

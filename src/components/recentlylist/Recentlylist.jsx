@@ -1,7 +1,12 @@
+/* library import */
 import { useState,useEffect } from "react";
-import GameItem from "../gameItem/GameItem"
 import { v4 as uuidv4 } from 'uuid';
+
+/* SCSS import */
 import "./Recentlylist.scss"
+
+/* component import */
+import GameItem from "../gameItem/GameItem"
 
 
 const RecentlyList = () => {

@@ -1,7 +1,6 @@
 
 /* component import */
 import Herosection from "../components/herosection/Herosection";
-
 import Recentlylist from "../components/recentlylist/Recentlylist"
 
 
