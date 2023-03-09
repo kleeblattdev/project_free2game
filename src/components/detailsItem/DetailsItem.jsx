@@ -1,4 +1,9 @@
-const DetailsItem = () => {
+import "./DetailsItem.scss"
+
+
+
+
+const DetailsItem = (props) => {
     return ( 
         <main className="detailsItem">
 
