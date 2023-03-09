@@ -1,1 +1,1 @@
-{"version":3,"sources":["DetailsItem.scss","DetailsItem.css"],"names":[],"mappings":"AAEI;EACI,UAAA;ACDR","file":"DetailsItem.css"}
+{"version":3,"sources":["../../variables.scss","DetailsItem.scss","DetailsItem.css"],"names":[],"mappings":"AAAA;;CAAA;ACKI;EACI,cDFG;AECX","file":"DetailsItem.css"}
