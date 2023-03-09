@@ -10,7 +10,7 @@ const GameItem = (props) => {
             <article className="gameCard">
             <img src={props.img} alt="Game Img" />
 
-            <h1>{props.title}</h1>
+            <h3>{props.title}</h3>
             <p>{props.description}</p>
             <Link className="readMoreLink" to={`/detailview/${props.id}`}>Read More</Link>
             <p> </p>            {/* p Tag zum Stylen vom Strich */}
