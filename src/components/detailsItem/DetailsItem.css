@@ -6,4 +6,8 @@
 }
 .detailsItem img {
   border-radius: 1.5rem;
+  width: 200px;
+}
+.detailsItem button {
+  width: 200px;
 }/*# sourceMappingURL=DetailsItem.css.map */
