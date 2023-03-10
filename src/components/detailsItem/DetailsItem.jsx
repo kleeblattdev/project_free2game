@@ -43,28 +43,42 @@ const DetailsItem = (props) => {
                 <article>
                     <h2>Additional Information</h2>
                     <p>Please note this free-to-play game may or may not offer optional in-game purchases.</p>
-                    <h3>Developer    </h3>
-                    <p>{props.developer}</p>
-                    <h3>Publisher   </h3>
-                    <p>{props.publisher}</p>
-                    <h3>Release Date    </h3>
-                    <p>{props.release_date}</p>
+                    <span>
+                        <h3>Developer    </h3>
+                        <p>{props.developer}</p>
+                    </span>
+                    <span>
+                        <h3>Publisher   </h3>
+                        <p>{props.publisher}</p>
+                    </span>
+                    <span>
+                        <h3>Release Date    </h3>
+                        <p>{props.release_date}</p>
+                    </span>
                 </article>
 
                 <article>
-                    <h2>Minimum System Requirements (Windows) </h2>
-                    <h3>OS</h3>
-                    <p>{props.os}</p>
-                    <h3>Memory</h3>
-                    <p>{props.memory}</p>
-                    <h3>Storage</h3>
-                    <p>{props.storage}</p>
-                    <h3>Processor</h3>
-                    <p>{props.processor}</p>
-                    <h3>Graphics</h3>
-                    <p>{props.graphics}</p>
-                    <h3>Additional Notes</h3>
-                    <p>Specifications may change during development</p>
+                    <span>
+                        <h2>Minimum System Requirements (Windows) </h2>
+                    </span>
+
+                    <span>
+                        <h3>OS</h3>
+                        <p>{props.os}</p>
+                        <h3>Memory</h3>
+                        <p>{props.memory}</p>
+                        <h3>Storage</h3>
+                        <p>{props.storage}</p>
+                    </span>
+
+                    <span>
+                        <h3>Processor</h3>
+                        <p>{props.processor}</p>
+                        <h3>Graphics</h3>
+                        <p>{props.graphics}</p>
+                        <h3>Additional Notes</h3>
+                        <p>Specifications may change during development</p>
+                    </span>
                 </article>
             </section>
 

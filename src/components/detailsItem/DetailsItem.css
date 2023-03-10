@@ -21,6 +21,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .detailsItem section:nth-of-type(2) article {
   max-width: 40vw;
@@ -33,8 +36,8 @@
 .detailsItem section:nth-of-type(2) article p {
   padding: 1rem 0;
 }
-.detailsItem section:nth-of-type(2) article:nth-of-type(1) {
-  width: 48vw;
+.detailsItem section:nth-of-type(2) article:nth-of-type(1) img {
+  width: 80%;
 }
 .detailsItem section:nth-of-type(2) article:nth-of-type(1) p {
   border: 1px solid #FF4654;
@@ -44,7 +47,32 @@
   width: 6rem;
   margin: 1rem 0;
 }
+.detailsItem section:nth-of-type(2) article:nth-of-type(2) {
+  padding: 0 4rem;
+}
 .detailsItem section:nth-of-type(2) article:nth-of-type(2) p {
   line-break: normal;
-  text-align: justify;
+  text-align: start;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(5) {
+  padding: 0 4rem;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(5) span {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 20rem;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(6) {
+  padding: 0 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(6) span {
+  width: 50%;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(6) span:nth-of-type(1) {
+  width: 90%;
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=DetailsItem.css.map */
