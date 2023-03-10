@@ -35,7 +35,7 @@ const DetailView = () => {
     if (getData?.minimum_system_requirements) {
 
         console.log(getData.description)
-        const description2 = getData?.description.replaceAll(".", ".  \n\n")
+        const description2 = getData?.description.replaceAll(".\r", ".  \n\n")
         console.log(description2)
 
         const description3 = getData?.description.split("\n")
