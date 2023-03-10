@@ -7,6 +7,8 @@ import DetailsItem from "../components/detailsItem/DetailsItem";
 
 import HeroSection from "../components/heroSection/HeroSection"
 import Navbar from "../components/navbar/Navbar"
+/* image import */
+import heroImg from "../image/HeroSection_img.png"
 
 const DetailView = () => {
     const params = useParams();   /* mit params.id  ansprechen */
