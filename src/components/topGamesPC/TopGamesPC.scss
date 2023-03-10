@@ -1,3 +1,25 @@
 .topGamesPc{
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "big small1"
+    "big small2"
+    "big small3"
+    ;
+
+    .firstGame{
+        grid-area: big;
+    }
+    .secondGame{
+        grid-area: small1;
+    }
+    .thirstGame{
+        grid-area: small2;
+    }
+    .fourthtGame{
+        grid-area: small3;
+    }
 }
+    
+
