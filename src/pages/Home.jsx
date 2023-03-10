@@ -9,8 +9,7 @@ import heroImg from "../image/HeroSection_img.png"
 const Home = () => {
     return ( 
         <main>
-            <h1>Home</h1>
-            <HeroSection img={heroImg}/>
+            <HeroSection img={heroImg} text="Home"/>
             <RecentlyList />
             <TopGamesBrowser />
         </main>

@@ -3,13 +3,12 @@
 .recentlyList{
 
     .recentlyListContainer{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
     }
-
-
+    
     button{
         width: 7rem;
         padding: .5rem;

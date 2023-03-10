@@ -27,7 +27,7 @@ const RecentlyList = () => {
 
 
     return ( 
-        <main className="recentlyList">
+        <section className="recentlyList">
 
         <p>Recently Added</p>
         <section className="recentlyListContainer">
@@ -52,7 +52,7 @@ const RecentlyList = () => {
 
             <button onClick={() => setLimiter(limiter + 4)}>SHOW MORE</button>
             
-        </main>
+        </section>
     );
 }
 
