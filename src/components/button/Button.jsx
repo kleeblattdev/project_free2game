@@ -3,11 +3,11 @@ import "./Button.scss"
 
 
 
-const Button = () => {
+const Button = (props) => {
     return ( 
 
         <section className="button">
-            <h1>Button</h1>
+            <p>{props.buttonName} </p>
         </section>
      );
 }

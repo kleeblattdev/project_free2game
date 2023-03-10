@@ -1,0 +1,17 @@
+/* color-scheme
+#FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
+*/
+.button {
+  width: 7rem;
+  padding: 0.5rem;
+  margin-left: auto;
+  color: #FFFFFF;
+  border-radius: 10px;
+  background-color: #FF4654;
+  cursor: pointer;
+}
+.button p {
+  color: #FFFFFF !important;
+  font-size: 1rem;
+  text-align: center;
+}/*# sourceMappingURL=Button.css.map */
