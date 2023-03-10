@@ -5,7 +5,8 @@ import { useParams } from "react-router-dom";
 /* component import */
 import DetailsItem from "../components/detailsItem/DetailsItem";
 
-
+import HeroSection from "../components/heroSection/HeroSection"
+import Navbar from "../components/navbar/Navbar"
 
 const DetailView = () => {
     const params = useParams();   /* mit params.id  ansprechen */
@@ -29,69 +30,77 @@ const DetailView = () => {
 
     }, [params.id]);
 
-   /*  let os = getData.minimum_system_requirements.os */
-    if (getData?.minimum_system_requirements){
+    /*  let os = getData.minimum_system_requirements.os */
+    if (getData?.minimum_system_requirements) {
 
         console.log(getData.description)
-         const description2 = getData?.description.replaceAll(".", ".  \n\n" )
-        console.log(description2) 
+        const description2 = getData?.description.replaceAll(".", ".  \n\n")
+        console.log(description2)
+
+        const description3 = getData?.description.split("\n")
+        console.log(description3)
+
 
         return (
-                    <section className="detailView">
-            <DetailsItem
-                imgEins={getData?.screenshots[0].image}
-                title={getData?.title}
-                thumbnail={getData?.thumbnail}
-                platform={getData?.platform}
-                genre={getData?.genre}
-                url={getData?.freetogame_profile_url}
-                description={description2}
-                imgZwei={getData?.screenshots[1].image}
-                imgDrei={getData?.screenshots[2].image}   
-                developer={getData?.developer}
-                publisher={getData?.publisher}
-                release_date={getData?.release_date}
-                
-                os={getData.minimum_system_requirements.os}
-                memory={getData?.minimum_system_requirements.memory}
-                storage={getData?.minimum_system_requirements.storage} 
-                processor={getData?.minimum_system_requirements.processor} 
-                graphics={getData?.minimum_system_requirements.graphics}
-                
+            <section className="detailView">
+                <Navbar />
+                <HeroSection img={heroImg} text="All Games" />
+                <DetailsItem
+                    imgEins={getData?.screenshots[0].image}
+                    title={getData?.title}
+                    thumbnail={getData?.thumbnail}
+                    platform={getData?.platform}
+                    genre={getData?.genre}
+                    url={getData?.freetogame_profile_url}
+                    description={description2}
+                    imgZwei={getData?.screenshots[1].image}
+                    imgDrei={getData?.screenshots[2].image}
+                    developer={getData?.developer}
+                    publisher={getData?.publisher}
+                    release_date={getData?.release_date}
 
-        />
+                    os={getData.minimum_system_requirements.os}
+                    memory={getData?.minimum_system_requirements.memory}
+                    storage={getData?.minimum_system_requirements.storage}
+                    processor={getData?.minimum_system_requirements.processor}
+                    graphics={getData?.minimum_system_requirements.graphics}
 
-            
-        </section>
+
+                />
+
+
+            </section>
         )
-    }else{
-        return(
-                                <section>
-            <DetailsItem
-                imgEins={getData?.screenshots[0].image}
-                title={getData?.title}
-                thumbnail={getData?.thumbnail}
-                platform={getData?.platform}
-                genre={getData?.genre}
-                url={getData?.freetogame_profile_url}
-                description={getData?.description}
-                imgZwei={getData?.screenshots[1].image}
-                imgDrei={getData?.screenshots[2].image}   
-                developer={getData?.developer}
-                publisher={getData?.publisher}
-                release_date={getData?.release_date}
-            
-                
+    } else {
+        return (
+            <section>
+                <Navbar />
+                <HeroSection img={heroImg} text="All Games" />
+                <DetailsItem
+                    imgEins={getData?.screenshots[0].image}
+                    title={getData?.title}
+                    thumbnail={getData?.thumbnail}
+                    platform={getData?.platform}
+                    genre={getData?.genre}
+                    url={getData?.freetogame_profile_url}
+                    description={getData?.description}
+                    imgZwei={getData?.screenshots[1].image}
+                    imgDrei={getData?.screenshots[2].image}
+                    developer={getData?.developer}
+                    publisher={getData?.publisher}
+                    release_date={getData?.release_date}
 
-        />
 
-     
-        </section>
+
+                />
+
+
+            </section>
         )
 
     }
 
-    
+
 }
 
 export default DetailView;
