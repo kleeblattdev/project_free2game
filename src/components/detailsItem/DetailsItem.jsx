@@ -1,20 +1,20 @@
 import Button from "../button/Button";
 import "./DetailsItem.scss"
-
-
-
+import HeroSection from "../heroSection/HeroSection";
 
 const DetailsItem = (props) => {
-
-
+    const imgEins = props.imgEins
+    const title = props.title
     
     return (
         <main className="detailsItem">
 
-            <section>
+            <HeroSection img={imgEins} text={title}/>
+
+{/*             <section>
                 <img src={props.imgEins} alt="header Bild von ${props.title}" />
                 <h1>{props.title}</h1>
-            </section>
+            </section> */}
 
 
             <section>

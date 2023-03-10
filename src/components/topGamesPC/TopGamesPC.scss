@@ -1,12 +1,13 @@
 .topGamesPc{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2,1fr) 1fr;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
     "big small1"
     "big small2"
     "big small3"
     ;
+    gap:10px;
 
     .firstGame{
         grid-area: big;

@@ -1,5 +1,5 @@
 /* library import */
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { useState } from "react"
 
 /* import SCSS */
@@ -17,8 +17,7 @@ const NavGameButton = ({link, icon, text}) => {
 
     return ( 
         <>
-        <Link to={link} className={isActive? "navButton redBg":"navButton"} id={icon}><p>{text}
-            </p></Link>
+        <NavLink to={link} className={isActive? "navButton redBg":"navButton"} id={icon}><p>{text}</p></NavLink>
 
         </>
     );

@@ -33,6 +33,7 @@ font-family: 'Source Sans Pro', sans-serif;
 body{
     background-color: $colorBlack;
     color: $colorWhite;
+    transition: all 0.5s;
 }
 
 h1{

@@ -23,15 +23,20 @@ const TopGamesPC = () => {
 
             {recentData?.map((item) => {
                 console.log(item.thumbnail)
-                return(
-                    <section className="topGamesPcContainer">
+                return(<>
                         <div className="firstGame">
                             <img src={item.thumbnail} alt="" />
                         </div>
-                        <div className="secondGame"></div>
-                        <div className="thirstGame"></div>
-                        <div className="fourthtGame"></div>
-                    </section>
+                        <div className="secondGame">
+                            hallo
+                        </div>
+                        <div className="thirstGame">
+                        hallo2
+                        </div>
+                        <div className="fourthtGame">
+                        hallo3
+                        </div>
+                        </>
                 )
             })}
 
