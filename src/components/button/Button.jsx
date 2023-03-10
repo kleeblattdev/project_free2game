@@ -1,5 +1,3 @@
-import "./Button.scss"
-
 
 const Button = ({text}) => {
     return ( 

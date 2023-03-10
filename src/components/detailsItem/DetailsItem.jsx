@@ -23,7 +23,7 @@ const DetailsItem = (props) => {
                 <a href={props.url} target={"_blank"}>
                    {/*  <button> play Now </button> */}
                     <Button 
-                        buttonName={`play Now`}
+                        text={`play Now`}
                         >  </Button>
                 </a>
             </article>
