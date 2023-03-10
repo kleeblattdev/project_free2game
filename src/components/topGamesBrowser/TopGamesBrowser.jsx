@@ -26,13 +26,13 @@ const TopGamesBrowser = () => {
             <p>Top recent Browser Games</p>
             <div className="recentBrowserGameContainer">
                 {recentData?.map((item) => {
-                    console.log(item.genre)
+                    console.log((item.id).toString())
                     return(
                     <GameItemNoDescription
                     img={item.thumbnail}
                     title={item.title}
                     platform={item.platform}
-                    id={item.id}
+                    id={(item.id).toString()}
                     genre={item.genre}
                     key={uuidv4()}
                     />)

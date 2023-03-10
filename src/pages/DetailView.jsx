@@ -1,5 +1,4 @@
 // library import
-import { v4 as uuidv4 } from "uuid";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -23,7 +22,6 @@ const DetailView = () => {
                 setData(data)
             })
 
-
             .catch(error => {
                 console.log("--> Error <--")
                 console.log(error)
@@ -31,36 +29,64 @@ const DetailView = () => {
 
     }, [params.id]);
 
-    return (
-        <section>
-
+   /*  let os = getData.minimum_system_requirements.os */
+    if (getData?.minimum_system_requirements){
+        return (
+                    <section>
             <DetailsItem
-                 imgEins={getData?.screenshots[0].image}
-                 title={getData?.title}
+                imgEins={getData?.screenshots[0].image}
+                title={getData?.title}
                 thumbnail={getData?.thumbnail}
                 platform={getData?.platform}
                 genre={getData?.genre}
                 url={getData?.freetogame_profile_url}
                 description={getData?.description}
-                  imgZwei={getData?.screenshots[1].image}
+                imgZwei={getData?.screenshots[1].image}
                 imgDrei={getData?.screenshots[2].image}   
                 developer={getData?.developer}
                 publisher={getData?.publisher}
                 release_date={getData?.release_date}
-                 os={getData?.minimum_system_requirements.os}
+                
+                os={getData.minimum_system_requirements.os}
                 memory={getData?.minimum_system_requirements.memory}
                 storage={getData?.minimum_system_requirements.storage} 
                 processor={getData?.minimum_system_requirements.processor} 
                 graphics={getData?.minimum_system_requirements.graphics}
                 
 
- 
+        />
 
-            >
-
-            </DetailsItem>
+            
         </section>
-    );
+        )
+    }else{
+        return(
+                                <section>
+            <DetailsItem
+                imgEins={getData?.screenshots[0].image}
+                title={getData?.title}
+                thumbnail={getData?.thumbnail}
+                platform={getData?.platform}
+                genre={getData?.genre}
+                url={getData?.freetogame_profile_url}
+                description={getData?.description}
+                imgZwei={getData?.screenshots[1].image}
+                imgDrei={getData?.screenshots[2].image}   
+                developer={getData?.developer}
+                publisher={getData?.publisher}
+                release_date={getData?.release_date}
+            
+                
+
+        />
+
+     
+        </section>
+        )
+
+    }
+
+    
 }
 
 export default DetailView;

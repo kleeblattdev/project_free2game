@@ -20,11 +20,10 @@ const GameItem = (props) => {
                 <h3>{props.title}</h3>
                 <p>{props.description}</p>
                 <Link className="readMoreLink" to={`/detailview/${props.id}`}>Read More</Link>
-            {/* <p> </p>   */}          {/* p Tag zum Stylen vom Strich */}
             </article>
             <section className="platformGenreSection">
+                
         {/* sets img src to platform logo */}
-        {/* logos unscharf  */}
         <img className="platformLogo" src={props.platform === "PC (Windows)" ? windowsLogo : browserLogo} alt="" />
 
         </section>
