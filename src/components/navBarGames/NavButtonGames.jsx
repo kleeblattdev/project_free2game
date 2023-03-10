@@ -1,11 +1,10 @@
-/* library import */
 import { Link } from "react-router-dom"
 import { useState } from "react"
 
 /* import SCSS */
-import "./NavButton.scss";
+import "./NavBarGames.scss"
 
-const NavButton = ({link, icon, text,classname}) => {
+const NavButtonGame = ({link, icon, text,classname}) => {
     const [isActive, setActive] = useState(false)
     const [homeButton,setHomeButton] = useState(false)
     const [gamesButton,setGamesButton] = useState(false)
@@ -23,4 +22,4 @@ const NavButton = ({link, icon, text,classname}) => {
     );
 }
 
-export default NavButton;
+export default NavButtonGame;

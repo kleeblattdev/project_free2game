@@ -1,11 +1,11 @@
 /* components import */
-import NavButton from "./NavButton"
+import NavButtonRecently from "./NavButtonRecently"
 import { useParams } from "react-router-dom";
 
 /* SCSS import */
-import "./Navbar.scss"
+import "./NavBarRecently.scss"
 
-const Navbar = () => {
+const NavBarRecently = () => {
     function openNav() {
         document.querySelector("nav").style.width = "200px";
         document.querySelector("header").style.marginLeft = "200px";
@@ -22,14 +22,14 @@ const Navbar = () => {
     }
 
         return ( 
-            <nav className="navBar">
+            <nav className="navBarRecently">
                 <div id="menuContainer">
                     <div className="menuButton" onClick={openNav}></div>
                     <div className="closeBtn" onClick={closeNav}></div>
                 </div>
-                <NavButton link="/" icon="home" text="Home" classname="active"/>
-                <NavButton link="/allgames" icon="games" text="All Games"/>
-                <NavButton link="/recentlyadded" icon="recent" text="Recently Added"/>
+                <NavButtonRecently link="/" icon="home" text="Home" classname="active"/>
+                <NavButtonRecently link="/allgames" icon="games" text="All Games"/>
+                <NavButtonRecently link="/recentlyadded" icon="recent" text="Recently Added"/>
                 <div className="verticalLine"/>
             </nav>
         );
@@ -37,4 +37,4 @@ const Navbar = () => {
     }
 
 
-export default Navbar;
+export default NavBarRecently;

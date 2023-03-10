@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 
 /* import SCSS */
-import "./NavButton.scss";
+import "../navBarRecently/NavButtonRecently.scss";
 
 const NavButton = ({link, icon, text,classname}) => {
     const [isActive, setActive] = useState(false)
