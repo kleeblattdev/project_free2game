@@ -31,8 +31,13 @@ const DetailView = () => {
 
    /*  let os = getData.minimum_system_requirements.os */
     if (getData?.minimum_system_requirements){
+
+        console.log(getData.description)
+         const description2 = getData?.description.replaceAll(".", ".  \n\n" )
+        console.log(description2) 
+
         return (
-                    <section>
+                    <section className="detailView">
             <DetailsItem
                 imgEins={getData?.screenshots[0].image}
                 title={getData?.title}
@@ -40,7 +45,7 @@ const DetailView = () => {
                 platform={getData?.platform}
                 genre={getData?.genre}
                 url={getData?.freetogame_profile_url}
-                description={getData?.description}
+                description={description2}
                 imgZwei={getData?.screenshots[1].image}
                 imgDrei={getData?.screenshots[2].image}   
                 developer={getData?.developer}

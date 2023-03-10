@@ -2,14 +2,77 @@
 #FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
 */
 .detailsItem {
-  /*     button{
-          width: 200px;
-      } */
-}
-.detailsItem h1 {
-  color: #FF4654;
+  margin-top: 1rem;
 }
 .detailsItem img {
-  border-radius: 1.5rem;
-  width: 200px;
+  border-radius: 2rem;
+}
+.detailsItem section:nth-of-type(1) {
+  max-width: 100vw;
+}
+.detailsItem section:nth-of-type(1) img {
+  width: 100%;
+}
+.detailsItem section:nth-of-type(1) h1 {
+  padding: 3rem 0 0 3rem;
+}
+.detailsItem section:nth-of-type(2) {
+  padding: 1rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.detailsItem section:nth-of-type(2) article {
+  max-width: 40vw;
+  width: 40vw;
+  padding: 2rem;
+}
+.detailsItem section:nth-of-type(2) article img {
+  width: 100%;
+}
+.detailsItem section:nth-of-type(2) article p {
+  padding: 1rem 0;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(1) img {
+  width: 80%;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(1) p {
+  border: 1px solid #FF4654;
+  border-radius: 20px;
+  padding: 0.5rem;
+  text-align: center;
+  width: 6rem;
+  margin: 1rem 0;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(2) {
+  padding: 0 4rem;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(2) p {
+  line-break: normal;
+  text-align: start;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(5) {
+  padding: 0 4rem;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(5) span {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 20rem;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(6) {
+  padding: 0 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(6) span {
+  width: 50%;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(6) span:nth-of-type(1) {
+  width: 90%;
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=DetailsItem.css.map */
