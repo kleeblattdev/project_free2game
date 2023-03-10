@@ -32,7 +32,7 @@ const DetailView = () => {
    /*  let os = getData.minimum_system_requirements.os */
     if (getData?.minimum_system_requirements){
         return (
-                    <section>
+                    <section className="detailView">
             <DetailsItem
                 imgEins={getData?.screenshots[0].image}
                 title={getData?.title}

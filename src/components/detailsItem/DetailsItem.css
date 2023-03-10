@@ -2,14 +2,34 @@
 #FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
 */
 .detailsItem {
-  /*     button{
-          width: 200px;
-      } */
-}
-.detailsItem h1 {
-  color: #FF4654;
+  margin-top: 1rem;
 }
 .detailsItem img {
-  border-radius: 1.5rem;
-  width: 200px;
+  border-radius: 2rem;
+}
+.detailsItem section:nth-of-type(1) {
+  max-width: 100vw;
+}
+.detailsItem section:nth-of-type(1) img {
+  width: 100%;
+}
+.detailsItem section:nth-of-type(1) h1 {
+  padding: 3rem 0 0 3rem;
+}
+.detailsItem section:nth-of-type(2) {
+  padding: 1rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.detailsItem section:nth-of-type(2) article {
+  max-width: 40vw;
+  width: 40vw;
+  padding: 2rem;
+}
+.detailsItem section:nth-of-type(2) article img {
+  width: 100%;
+}
+.detailsItem section:nth-of-type(2) article:nth-of-type(1) {
+  width: 48vw;
 }/*# sourceMappingURL=DetailsItem.css.map */
