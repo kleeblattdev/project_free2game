@@ -47,7 +47,7 @@ h2{
     font-size: 1.5rem;
 }
 
-h3{
+h3, button{
     font-family: 'Oswald', sans-serif;
     font-variation-settings: 800;
     font-size: 1.1rem;
@@ -68,4 +68,15 @@ a{
 main{
     padding: 50px 25px 0 50px;
     margin-left: 80px;
+}
+
+button{
+    width: 7rem;
+    padding: 0.5rem;
+    margin-left: auto;
+    color: $colorWhite;
+    border: none;
+    border-radius: 10px;
+    background-color: $colorRed;
+    cursor: pointer;
 }

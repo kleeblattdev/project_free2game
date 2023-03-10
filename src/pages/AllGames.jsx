@@ -10,7 +10,7 @@ import heroImg from "../image/HeroSection_AllGames.png"
 const AllGames = () => {
     return ( 
         <main>
-            <HeroSection img={heroImg} text="All Game"/>
+            <HeroSection img={heroImg} text="All Games"/>
             <DropDownFilter/>
             <GamesList/>
         </main>
