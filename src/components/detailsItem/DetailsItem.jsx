@@ -55,13 +55,13 @@ const DetailsItem = (props) => {
                 <h3>Memory</h3>
                 <p>{props.memory}</p>
                 <h3>Storage</h3>
-                <p>props.minimum_system_requirements.storage</p>
+                <p>{props.storage}</p>
                 <h3>Processor</h3>
-                <p>props.minimum_system_requirements-processor</p>
+                <p>{props.processor}</p>
                 <h3>Graphics</h3>
-                <p>props.minimum_system_requirements.graphics</p>
+                <p>{props.graphics}</p>
                 <h3>Additional Notes</h3>
-                <p>props.Specifications may change during development</p>
+                <p>Specifications may change during development</p>
             </article>
 
 

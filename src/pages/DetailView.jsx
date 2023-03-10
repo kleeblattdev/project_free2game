@@ -49,6 +49,11 @@ const DetailView = () => {
                 release_date={getData?.release_date}
                  os={getData?.minimum_system_requirements.os}
                 memory={getData?.minimum_system_requirements.memory}
+                storage={getData?.minimum_system_requirements.storage} 
+                processor={getData?.minimum_system_requirements.processor} 
+                graphics={getData?.minimum_system_requirements.graphics}
+                
+
  
 
             >
