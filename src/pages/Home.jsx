@@ -6,7 +6,7 @@ import heroImg from "../image/HeroSection_img.png"
 
 const Home = () => {
     return ( 
-        <div>
+        <main>
             <h1>Home</h1>
             <HeroSection 
             img={heroImg}
