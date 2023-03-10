@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 /* component import */
 import DetailsItem from "../components/detailsItem/DetailsItem";
 
-import HeroSection from "../components/heroSection/HeroSection"
 import Navbar from "../components/navbar/Navbar"
 /* image import */
 import heroImg from "../image/HeroSection_img.png"
@@ -46,7 +45,6 @@ const DetailView = () => {
         return (
             <section className="detailView">
                 <Navbar />
-                <HeroSection img={heroImg} text="Details" />
                 <DetailsItem
                     imgEins={getData?.screenshots[0].image}
                     title={getData?.title}
@@ -77,7 +75,6 @@ const DetailView = () => {
         return (
             <section>
                 <Navbar />
-                <HeroSection img={heroImg} text="All Games" />
                 <DetailsItem
                     imgEins={getData?.screenshots[0].image}
                     title={getData?.title}
@@ -91,8 +88,6 @@ const DetailView = () => {
                     developer={getData?.developer}
                     publisher={getData?.publisher}
                     release_date={getData?.release_date}
-
-
 
                 />
 
