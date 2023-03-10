@@ -17,7 +17,7 @@ const DetailsItem = (props) => {
             <section>
                 <article>
                     <img src={props.thumbnail} alt="SBild links" />
-                    <h2>{props.platform}</h2>
+                    <h2>Platform: {props.platform}</h2>
                     <p>{props.genre}</p>
 
                     <a href={props.url} target={"_blank"}>
