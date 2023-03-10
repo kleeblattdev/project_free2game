@@ -13,7 +13,9 @@ const GameItem = (props) => {
 
     return ( 
         <section className="gameItem">
-            <img src={props.img} alt={props.title}/>
+            
+            <img className="gameImg" src={props.img} alt={props.title}/>
+
             <article className="gameCard">
                 <h3>{props.title}</h3>
                 <p>{props.description}</p>
@@ -23,9 +25,9 @@ const GameItem = (props) => {
             <section className="platformGenreSection">
         {/* sets img src to platform logo */}
         {/* logos unscharf  */}
-            <img className="platformLogo" src={props.platform === "PC (Windows)" ? windowsLogo : browserLogo} alt="" />
+        <img className="platformLogo" src={props.platform === "PC (Windows)" ? windowsLogo : browserLogo} alt="" />
 
-            </section>
+        </section>
         </section>
     );
 }
