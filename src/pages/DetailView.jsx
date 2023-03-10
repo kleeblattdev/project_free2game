@@ -46,7 +46,7 @@ const DetailView = () => {
         return (
             <section className="detailView">
                 <Navbar />
-                <HeroSection img={heroImg} text="All Games" />
+                <HeroSection img={heroImg} text="Details" />
                 <DetailsItem
                     imgEins={getData?.screenshots[0].image}
                     title={getData?.title}
