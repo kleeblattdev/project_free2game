@@ -6,13 +6,12 @@ import { v4 as uuidv4 } from 'uuid';
 import "../recentlylist/Recentlylist.scss"
 
 /* component import */
-import GameItemNoDescription from "../GameItemNoDescription/GameItemNoDescription"
+import GameItemNoDescription from "../gameItemNoDescription/GameItemNoDescription"
 
 
 const RecentlyList = () => {
 
     const [recentData, setRecentData] = useState([])
-    const [limiter,setLimiter] = useState(4)
 
     useEffect(() => {
         fetch(`https://www.freetogame.com/api/games?&sort-by=release-date?&platform=all`)
