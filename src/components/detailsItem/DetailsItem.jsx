@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../button/Button";
 import "./DetailsItem.scss"
 
 
@@ -20,7 +21,10 @@ const DetailsItem = (props) => {
                 <p>{props.genre}</p>
 
                 <a href={props.url} target={"_blank"}>
-                    <button> play Now </button>
+                   {/*  <button> play Now </button> */}
+                    <Button 
+                        buttonName={`play Now`}
+                        >  </Button>
                 </a>
             </article>
 

@@ -1,13 +1,15 @@
 /* color-scheme
 #FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
 */
+.detailsItem {
+  /*     button{
+          width: 200px;
+      } */
+}
 .detailsItem h1 {
   color: #FF4654;
 }
 .detailsItem img {
   border-radius: 1.5rem;
-  width: 200px;
-}
-.detailsItem button {
   width: 200px;
 }/*# sourceMappingURL=DetailsItem.css.map */
