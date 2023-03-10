@@ -3,7 +3,6 @@ import "./HeroSection.scss"
 
 
 const HeroSection = ({img,text}) => {
-    console.log(img)
     return ( 
         <section className="heroSection">
             <img className="heroSectionImg" src={img} alt={text} />

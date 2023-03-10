@@ -26,7 +26,7 @@ const TopGamesBrowser = () => {
             <p>Top recent Browser Games</p>
             <div className="recentBrowserGameContainer">
                 {recentData?.map((item) => {
-                    console.log((item.id).toString())
+                    /* console.log((item.id).toString()) */
                     return(
                     <GameItemNoDescription
                     img={item.thumbnail}

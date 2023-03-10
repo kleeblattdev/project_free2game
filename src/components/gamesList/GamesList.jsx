@@ -8,7 +8,7 @@ import "./GamesList.scss"
 /* component import */
 import GameItem from "../gameItem/GameItem"
 
-const GamesList = ({searchTerm}) => {
+const GamesList = () => {
 
     const [games, setGames]=useState([])
 
@@ -22,11 +22,19 @@ const GamesList = ({searchTerm}) => {
 
     console.log(games)
 
+    const [searchTerm, setSearchTerm] = useState("")
+    
+    function searchGame(event){
+        setSearchTerm(event.target.value)
+        console.log(searchTerm)
+    }
+
     let gameSearch = true;
 
     return ( 
+        <>
+        <input type="search" name="search" id="search" onChange={searchGame}/>
         <section className="gamesList">
-
             {games && games.map((games) =>{
                 if(searchTerm){
                     if(games.title.includes(searchTerm)){
@@ -52,6 +60,7 @@ const GamesList = ({searchTerm}) => {
 				<h5>This Game does not exist.</h5>
 			)}
         </section>
+        </>
     );
 }
 

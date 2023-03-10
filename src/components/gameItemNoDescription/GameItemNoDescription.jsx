@@ -1,8 +1,13 @@
-import "./GameItemNoDescription.scss"
+/* library import */
 import { Link } from "react-router-dom";
+
+/* SCSS import */
+import "./GameItemNoDescription.scss"
+
+/* image import */
 import windowsLogo from "../../image/windows_Logo.png"
 import browserLogo from "../../image/browser_Logo.png"
-import "./GameItemNoDescription.scss"
+
 
 const GameItemNoDescription = (props) => {
     return ( 

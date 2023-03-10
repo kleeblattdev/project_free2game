@@ -4,7 +4,7 @@ import NavButton from "./NavButton"
 /* SCSS import */
 import "./Navbar.scss"
 
-const Navbar = () => {
+const Navbar = (props) => {
     function openNav() {
         document.querySelector("nav").style.width = "200px";
         document.querySelector("header").style.marginLeft = "200px";
@@ -20,6 +20,8 @@ const Navbar = () => {
         document.querySelector(".verticalLine").style.left = "70px";
     }
     console.log(document.querySelectorAll(".navButton"))
+
+    console.log(props.page)
 
     return ( 
         <nav className="navBar">

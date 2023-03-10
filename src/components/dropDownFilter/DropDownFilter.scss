@@ -1,3 +1,14 @@
-.dropDownFilter{
+@import "../../variables.scss";
 
+.dropDownFilter{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    .dropDownSelect{
+        color: $colorWhite;
+        background-color: $colorRed;
+        .chip{
+            background-color: $colorRed;
+        }
+    }
 }
