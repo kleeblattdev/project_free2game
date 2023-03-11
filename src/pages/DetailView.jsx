@@ -9,6 +9,9 @@ import Navbar from "../components/navbar/Navbar"
 /* image import */
 import heroImg from "../image/HeroSection_img.png"
 
+// import fehlerBild 404 wenn API keine Bilder hat
+import fehlerBild from "../image/404_Fehler_2.jpg"
+
 const DetailView = () => {
     const params = useParams();   /* mit params.id  ansprechen */
     console.log(params);
@@ -21,6 +24,9 @@ const DetailView = () => {
             .then(response => response.json())
             .then(data => {
                 console.log(data)
+                
+                
+                
                 setData(data)
             })
 
@@ -46,15 +52,15 @@ const DetailView = () => {
             <section className="detailView">
                 <Navbar />
                 <DetailsItem
-                    imgEins={getData?.screenshots[0].image}
+                    imgEins={getData?.screenshots[0]?.image !=null ? getData?.screenshots[0].image : fehlerBild}
                     title={getData?.title}
-                    thumbnail={getData?.thumbnail}
+                    thumbnail={getData?.thumbnail !=null ? getData?.thumbnail : fehlerBild}
                     platform={getData?.platform}
                     genre={getData?.genre}
                     url={getData?.freetogame_profile_url}
                     description={description2}
-                    imgZwei={getData?.screenshots[1].image}
-                    imgDrei={getData?.screenshots[2].image}
+                    imgZwei={getData?.screenshots[1]?.image !=null ? getData?.screenshots[1].image : fehlerBild}
+                    imgDrei={getData?.screenshots[2]?.image !=null ? getData?.screenshots[2].image : fehlerBild}
                     developer={getData?.developer}
                     publisher={getData?.publisher}
                     release_date={getData?.release_date}
@@ -76,15 +82,15 @@ const DetailView = () => {
             <section>
                 <Navbar />
                 <DetailsItem
-                    imgEins={getData?.screenshots[0].image}
+                    imgEins={getData?.screenshots[0]?.image !=null ? getData?.screenshots[0].image : fehlerBild}
                     title={getData?.title}
-                    thumbnail={getData?.thumbnail}
+                    thumbnail={getData?.thumbnail !=null ? getData?.thumbnail : fehlerBild}
                     platform={getData?.platform}
                     genre={getData?.genre}
                     url={getData?.freetogame_profile_url}
                     description={getData?.description}
-                    imgZwei={getData?.screenshots[1].image}
-                    imgDrei={getData?.screenshots[2].image}
+                    imgZwei={getData?.screenshots[1]?.image !=null ? getData?.screenshots[1].image : fehlerBild}
+                    imgDrei={getData?.screenshots[2]?.image !=null ? getData?.screenshots[2].image : fehlerBild}
                     developer={getData?.developer}
                     publisher={getData?.publisher}
                     release_date={getData?.release_date}
