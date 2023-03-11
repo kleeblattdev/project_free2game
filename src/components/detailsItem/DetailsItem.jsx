@@ -62,7 +62,7 @@ const DetailsItem = (props) => {
 
                 <article>
                     <span>
-                        <h2>Minimum System Requirements (Windows) </h2>
+                        <h2>Minimum System Requirements ({props.platform}) </h2>
                     </span>
 
                     <span>

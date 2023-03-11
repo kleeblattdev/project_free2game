@@ -48,7 +48,7 @@
   margin: 1rem 0;
 }
 .detailsItem section:nth-of-type(2) article:nth-of-type(2) {
-  padding: 0 4rem;
+  padding: 2rem 4rem;
 }
 .detailsItem section:nth-of-type(2) article:nth-of-type(2) p {
   line-break: normal;
@@ -75,4 +75,26 @@
 .detailsItem section:nth-of-type(2) article:nth-of-type(6) span:nth-of-type(1) {
   width: 90%;
   padding-bottom: 2rem;
+}
+
+/****************************************************************
+*
+*                Media queries
+*
+*****************************************************************/
+@media screen and (max-width: 870px) {
+  .detailsItem section:nth-of-type(2) article {
+    max-width: 80vw;
+    width: 80vw;
+  }
+  .detailsItem section:nth-of-type(2) article:nth-of-type(1) {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .detailsItem section:nth-of-type(2) article:nth-of-type(1) h2 {
+    padding-top: 1rem;
+  }
 }/*# sourceMappingURL=DetailsItem.css.map */
