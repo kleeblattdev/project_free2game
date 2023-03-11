@@ -19,9 +19,6 @@ const Navbar = (props) => {
         document.querySelector(".closeBtn").style.display = "none";
         document.querySelector(".verticalLine").style.left = "70px";
     }
-    console.log(document.querySelectorAll(".navButton"))
-
-    console.log(props.page)
 
     return ( 
         <nav className="navBar">
