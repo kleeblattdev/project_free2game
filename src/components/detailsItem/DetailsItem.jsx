@@ -2,14 +2,22 @@ import Button from "../button/Button";
 import "./DetailsItem.scss"
 import HeroSection from "../heroSection/HeroSection";
 
+
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
+
 const DetailsItem = (props) => {
     const imgEins = props.imgEins
     const title = props.title
+
+    scrollToTop()
     
     return (
         <main className="detailsItem">
 
-            <HeroSection img={imgEins} text={title}/>
+
+            <HeroSection img={imgEins} text={title} > </HeroSection>
 
 {/*             <section>
                 <img src={props.imgEins} alt="header Bild von ${props.title}" />

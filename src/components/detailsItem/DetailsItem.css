@@ -4,6 +4,9 @@
 .detailsItem {
   margin-top: 1rem;
 }
+.detailsItem .heroSection img {
+  max-height: 70vh;
+}
 .detailsItem img {
   border-radius: 2rem;
 }
