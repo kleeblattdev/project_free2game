@@ -55,7 +55,7 @@ const DetailsItem = (props) => {
                     <h2>Additional Information</h2>
                     <p>Please note this free-to-play game may or may not offer optional in-game purchases.</p>
                     <span>
-                        <h3>Developer    </h3>
+                        <h3   >Developer   </h3>
                         <p>{props.developer}</p>
                     </span>
                     <span>
@@ -68,7 +68,7 @@ const DetailsItem = (props) => {
                     </span>
                 </article>
 
-                <article>
+                <article style={{ display: props.os  ? "flex" : "none"}} >
                     <span>
                         <h2>Minimum System Requirements ({props.platform}) </h2>
                     </span>
@@ -82,8 +82,8 @@ const DetailsItem = (props) => {
                         <p>{props.storage}</p>
                     </span>
 
-                    <span>
-                        <h3>Processor</h3>
+                    <span >
+                        <h3  >Processor</h3>
                         <p>{props.processor}</p>
                         <h3>Graphics</h3>
                         <p>{props.graphics}</p>
