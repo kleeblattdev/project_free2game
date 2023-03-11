@@ -2,13 +2,8 @@
 
 .dropDownFilter{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 20px;
-    .dropDownSelect{
-        color: $colorWhite;
-        background-color: $colorRed;
-        .chip{
-            background-color: $colorRed;
-        }
-    }
+    gap:10px;
 }

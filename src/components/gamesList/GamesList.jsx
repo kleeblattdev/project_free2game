@@ -20,13 +20,10 @@ const GamesList = () => {
         })
     },[])
 
-    console.log(games)
-
     const [searchTerm, setSearchTerm] = useState("")
     
     function searchGame(event){
         setSearchTerm(event.target.value)
-        console.log(searchTerm)
     }
 
     let gameSearch = true;
