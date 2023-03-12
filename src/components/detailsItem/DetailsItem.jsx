@@ -34,7 +34,9 @@ const DetailsItem = (props) => {
              </div>
 
                 <article>
-                    <img src={props.thumbnail} alt="SBild links" />
+                   <a href={props.url} target={"_blank"}> 
+                   <img src={props.thumbnail} alt="SBild links" />
+                   </a>
                     <h2>Platform: {props.platform}</h2>
                     <p>{props.genre}</p>
 
