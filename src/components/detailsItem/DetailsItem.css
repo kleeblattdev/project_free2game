@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* color-scheme
 #FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
 */
@@ -57,7 +58,7 @@
   width: 80%;
 }
 .detailsItem section:nth-of-type(2) article:nth-of-type(1) img:hover {
-  scale: 1.05;
+  scale: 1.15;
   transition: 0.5s;
   border-radius: 5rem;
   box-shadow: 0.1rem 0.9rem 4rem greenyellow;
@@ -119,6 +120,10 @@
   }
   .detailsItem section:nth-of-type(2) article:nth-of-type(1) h2 {
     padding-top: 1rem;
+  }
+  .detailsItem section:nth-of-type(2) article:nth-of-type(1) a {
+    text-align: center;
+    /* da hier das Bild drin ist und es sonst linksbündig wäre */
   }
   .detailsItem section:nth-of-type(2) div {
     width: 65vw;

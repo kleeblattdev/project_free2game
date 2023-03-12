@@ -73,7 +73,7 @@
 
             img {
                 width: 100%;
-                box-shadow:  0.1rem 0.9rem 4rem $colorWhite;
+                box-shadow: 0.1rem 0.9rem 4rem $colorWhite;
 
             }
 
@@ -85,19 +85,17 @@
 
         article:nth-of-type(1) {
 
-            a{
+            a {}
 
-                
-            }
             img {
                 width: 80%;
 
-                &:hover{
-                    scale: 1.05;
+                &:hover {
+                    scale: 1.15;
                     transition: 0.5s;
                     border-radius: 5rem;
-                    box-shadow:  0.1rem 0.9rem 4rem greenyellow;
-                    }
+                    box-shadow: 0.1rem 0.9rem 4rem greenyellow;
+                }
             }
 
             p {
@@ -182,6 +180,12 @@
 
                 h2 {
                     padding-top: 1rem;
+                }
+
+                a {
+                    text-align: center;
+                    /* da hier das Bild drin ist und es sonst linksbündig wäre */
+
                 }
 
             }
