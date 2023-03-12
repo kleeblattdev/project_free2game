@@ -12,6 +12,7 @@ import heroImg from "../image/HeroSection_img.png"
 // import fehlerBild 404 wenn API keine Bilder hat
 import fehlerBild from "../image/404_Fehler_2.jpg"
 
+
 const DetailView = () => {
     const params = useParams();   /* mit params.id  ansprechen */
     console.log(params);
@@ -65,7 +66,7 @@ const DetailView = () => {
                     publisher={getData?.publisher}
                     release_date={getData?.release_date}
 
-                    os={getData.minimum_system_requirements.os}
+                    os={getData?.minimum_system_requirements.os}
                     memory={getData?.minimum_system_requirements.memory}
                     storage={getData?.minimum_system_requirements.storage}
                     processor={getData?.minimum_system_requirements.processor}
