@@ -11,6 +11,14 @@
     "big small3"
     ;
     gap:.5rem;
+    .description{
+        padding-left: 1rem;
+        padding-top: .5rem;
+        padding-bottom:.5rem ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
     .button{
         background-color: $colorRed;
@@ -95,6 +103,7 @@
     }
     .logoSection{
         display: flex;
+        justify-content: space-between;
         img{
             width: 1.75rem;
         }

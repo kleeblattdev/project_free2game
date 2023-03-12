@@ -38,7 +38,7 @@ const TopGamesPC = () => {
             <div className="secondGame">
                 <img src={recentData[1]?.thumbnail} alt="" />
                     <p className="number">2</p>
-                <div>
+                <div className="description">
                 <p>{recentData[1]?.title}</p>
                 <Link className="button">READ MORE</Link>
                 <div className="logoSection">
@@ -51,7 +51,7 @@ const TopGamesPC = () => {
             <div className="thirdGame">
                 <img src={recentData[2]?.thumbnail} alt="" />
                 <p className="number">3</p>
-                <div>
+                <div className="description">
                 <p>{recentData[2]?.title}</p>
                 <Link className="button">READ MORE</Link>
                 <div className="logoSection">
@@ -64,7 +64,7 @@ const TopGamesPC = () => {
             <div className="fourthGame">
                 <img src={recentData[3]?.thumbnail} alt="" />
                 <p className="number">4</p>
-                <div>
+                <div className="description">
                 <p>{recentData[3]?.title}</p>
                 <Link className="button">READ MORE</Link>
                 <div className="logoSection">
