@@ -1,4 +1,5 @@
 /* library import */
+import {useState} from "react"
 import { v4 as uuidv4 } from 'uuid'
 
 //data import
@@ -13,12 +14,28 @@ import DropDownItem from './DropDownItem'
 import "./DropDownFilter.scss"
 
 const DropDownFilter = () => {
+    const [getPlatform, setGetPlatform]=useState("")
+    const [getGenre, setGetGenre]=useState("")
+    const [getSortBy, setGetSortBy]=useState("")
 
+    function handlePlatform(event){
+        setGetPlatform(event.target.value)
+    }
 
+    function handleGenre(event){
+        setGetGenre(event.target.value)
+    }
+
+    function handleSortBy(event){
+        setGetSortBy(event.target.value)
+    }
+
+    console.log(getPlatform, getGenre, getSortBy)
+    
     return (
     <section className="dropDownFilter">
         <label htmlFor="platform">
-            <select name="platform" id="platform" multiple={true}>
+            <select name="platform" id="platform" multiple={true} onChange={handlePlatform}>
                 {platform.map((platform)=>{
                     return (<DropDownItem
                     key={uuidv4()}
@@ -30,7 +47,7 @@ const DropDownFilter = () => {
             </select>
         </label>
         <label htmlFor="genre">
-            <select name="genre" id="genre" multiple={true}>
+            <select name="genre" id="genre" multiple={true} onChange={handleGenre}>
                 {genre.map((genre)=>{
                     return (<DropDownItem
                         key={uuidv4()}
@@ -41,7 +58,7 @@ const DropDownFilter = () => {
             </select>
         </label>
         <label htmlFor="sortBy">
-            <select name="sortBy" id="sortBy" multiple={true}>
+            <select name="sortBy" id="sortBy" multiple={true} onChange={handleSortBy}>
                 {sortBy.map((sortBy)=>{
                     return (<DropDownItem
                         key={uuidv4()}
