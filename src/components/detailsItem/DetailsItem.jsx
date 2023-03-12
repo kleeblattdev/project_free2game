@@ -12,20 +12,27 @@ const DetailsItem = (props) => {
     const title = props.title
 
     scrollToTop()
-    
+
     return (
         <main className="detailsItem">
 
 
             <HeroSection img={imgEins} text={title} > </HeroSection>
 
-{/*             <section>
+            {/*             <section>
                 <img src={props.imgEins} alt="header Bild von ${props.title}" />
                 <h1>{props.title}</h1>
             </section> */}
 
 
-            <section>
+
+
+            <section  >
+             
+             <div style={{ backgroundImage: `url(${imgEins})` }} >
+                
+             </div>
+
                 <article>
                     <img src={props.thumbnail} alt="SBild links" />
                     <h2>Platform: {props.platform}</h2>
@@ -68,7 +75,7 @@ const DetailsItem = (props) => {
                     </span>
                 </article>
 
-                <article style={{ display: props.os  ? "flex" : "none"}} >
+                <article style={{ display: props.os ? "flex" : "none" }} >
                     <span>
                         <h2>Minimum System Requirements ({props.platform}) </h2>
                     </span>
@@ -92,6 +99,7 @@ const DetailsItem = (props) => {
                     </span>
                 </article>
             </section>
+            
 
         </main>
     );

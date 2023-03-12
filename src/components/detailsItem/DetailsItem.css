@@ -28,6 +28,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+.detailsItem section:nth-of-type(2) div {
+  position: absolute;
+  width: 80vw;
+  max-height: 300vw;
+  height: 400%;
+  overflow-y: hidden;
+  background-attachment: fixed;
+  opacity: 0.2;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  filter: hue-rotate(80deg);
+}
 .detailsItem section:nth-of-type(2) article {
   max-width: 40vw;
   width: 40vw;
@@ -35,6 +48,7 @@
 }
 .detailsItem section:nth-of-type(2) article img {
   width: 100%;
+  box-shadow: 0.1rem 0.9rem 4rem #FFFFFF;
 }
 .detailsItem section:nth-of-type(2) article p {
   padding: 1rem 0;
@@ -99,5 +113,11 @@
   }
   .detailsItem section:nth-of-type(2) article:nth-of-type(1) h2 {
     padding-top: 1rem;
+  }
+  .detailsItem section:nth-of-type(2) div {
+    width: 65vw;
+    /* !!! Vorsicht sonst horizontal-scroll */
+    max-height: 410vh;
+    height: 320%;
   }
 }/*# sourceMappingURL=DetailsItem.css.map */
