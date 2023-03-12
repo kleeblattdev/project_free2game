@@ -60,13 +60,19 @@
         }
         .title1{
             position: absolute;
-            top: 60%;
+            top: 40%;
             left: 10%;
+            height: 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
             img{
                 width:1.75rem ;
             }
             div{
                 display: flex;
+                justify-content: space-between;
             }
         }
     }
