@@ -73,8 +73,7 @@ const TopGamesPC = () => {
                 </div>
                 </div>
             </div>
-            
-            
+            <Link to={'/allgames'}><button>SHOW MORE</button></Link>
 
         </section> 
     );
