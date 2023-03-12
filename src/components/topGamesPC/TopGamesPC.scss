@@ -1,25 +1,43 @@
+@import "../../variables.scss";
+
 .topGamesPc{
     display: grid;
-    grid-template-columns: repeat(2,1fr) 1fr;
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
     "big small1"
     "big small2"
     "big small3"
     ;
-    gap:10px;
+    gap:.5rem;
 
     .firstGame{
         grid-area: big;
+        img{
+            height: 100%;
+            width: 100%;
+        }
     }
     .secondGame{
+        background-color: $colorMidnightBlue;
         grid-area: small1;
+        img{
+            height: 100%;
+        }
     }
-    .thirstGame{
+    .thirdGame{
+        background-color: $colorMidnightBlue;
         grid-area: small2;
+                img{
+            height: 100%;
+        }
     }
-    .fourthtGame{
+    .fourthGame{
+        background-color: $colorMidnightBlue;
         grid-area: small3;
+                img{
+            height: 100%;
+        }
     }
 }
     

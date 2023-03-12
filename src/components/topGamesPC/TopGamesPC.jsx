@@ -14,31 +14,29 @@ const TopGamesPC = () => {
         .then(data => {
             
             setRecentData(data.slice(0,limiter))
+            console.log(data[0]?.thumbnail)
         })
     },[])
-    
     return ( 
         <section className="topGamesPc">
-            {/* <h1>Top PC Games List</h1> */}
 
-            {recentData?.map((item) => {
-                console.log(item.thumbnail)
-                return(<>
-                        <div className="firstGame">
-                            <img src={item.thumbnail} alt="" />
-                        </div>
-                        <div className="secondGame">
-                            hallo
-                        </div>
-                        <div className="thirstGame">
-                        hallo2
-                        </div>
-                        <div className="fourthtGame">
-                        hallo3
-                        </div>
-                        </>
-                )
-            })}
+            <div className="firstGame">
+                <img src={recentData[0]?.thumbnail} alt="" />
+            </div>
+            
+            <div className="secondGame">
+                <img src={recentData[1]?.thumbnail} alt="" />
+            </div>
+            
+            <div className="thirdGame">
+                <img src={recentData[2]?.thumbnail} alt="" />
+            </div>
+            
+            <div className="fourthGame">
+                <img src={recentData[3]?.thumbnail} alt="" />
+            </div>
+            
+            
 
         </section> 
     );
