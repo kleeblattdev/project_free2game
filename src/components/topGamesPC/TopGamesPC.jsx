@@ -20,8 +20,8 @@ const TopGamesPC = () => {
         })
     },[])
     return ( 
+        
         <section className="topGamesPc">
-
             <div className="firstGame">
                 <p className="number1">1</p>
                 <div className="title1">
