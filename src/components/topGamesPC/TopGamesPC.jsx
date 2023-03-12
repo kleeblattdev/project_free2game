@@ -16,7 +16,7 @@ const TopGamesPC = () => {
         .then(data => {
             
             setRecentData(data.slice(0,limiter))
-            console.log(data[0])
+            console.log(data[0].id)
         })
     },[])
     return ( 
@@ -26,7 +26,7 @@ const TopGamesPC = () => {
                 <p className="number1">1</p>
                 <div className="title1">
                 <p>{recentData[0]?.title}</p>
-                <Link className="button">READ MORE</Link>
+                <Link to={`/detailview/${recentData[0]?.id}`} className="button">READ MORE</Link>
                     <div>
                         <img src={windowsLogo} alt="windows" />
                         <p>{recentData[1]?.genre}</p>
@@ -40,7 +40,7 @@ const TopGamesPC = () => {
                     <p className="number">2</p>
                 <div className="description">
                 <p>{recentData[1]?.title}</p>
-                <Link className="button">READ MORE</Link>
+                <Link to={`/detailview/${recentData[1]?.id}`} className="button">READ MORE</Link>
                 <div className="logoSection">
                     <img src={windowsLogo} alt="windows" />
                     <p>{recentData[1]?.genre}</p>
@@ -53,7 +53,7 @@ const TopGamesPC = () => {
                 <p className="number">3</p>
                 <div className="description">
                 <p>{recentData[2]?.title}</p>
-                <Link className="button">READ MORE</Link>
+                <Link to={`/detailview/${recentData[2]?.id}`} className="button">READ MORE</Link>
                 <div className="logoSection">
                     <img src={windowsLogo} alt="windows" />
                     <p>{recentData[2]?.genre}</p>
@@ -66,7 +66,7 @@ const TopGamesPC = () => {
                 <p className="number">4</p>
                 <div className="description">
                 <p>{recentData[3]?.title}</p>
-                <Link className="button">READ MORE</Link>
+                <Link to={`/detailview/${recentData[3]?.id}`} className="button">READ MORE</Link>
                 <div className="logoSection">
                     <img src={windowsLogo} alt="windows" />
                     <p>{recentData[3]?.genre}</p>
