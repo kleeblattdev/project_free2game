@@ -80,4 +80,11 @@ button{
     border-radius: 10px;
     background-color: $colorRed;
     cursor: pointer;
+
+    &:hover{
+    scale: 1.4;
+    transition: 0.5s;
+    border-radius: 30px;
+    color: greenyellow;
+    }
 }
