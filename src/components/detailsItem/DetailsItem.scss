@@ -27,6 +27,7 @@
 
         img {
             width: 100%;
+
         }
 
         h1 {
@@ -52,16 +53,16 @@
             position: absolute;
             width: 80vw;
 
-               max-height: 300vw;
-               height: 400%;
-               overflow-y: hidden;
-           background-attachment: fixed;
+            max-height: 300vw;
+            height: 400%;
+            overflow-y: hidden;
+            background-attachment: fixed;
             opacity: 0.2;
             z-index: -1;
             background-position: center;
             background-size: cover;
-                     filter:hue-rotate(80deg);
- 
+            filter: hue-rotate(80deg);
+
         }
 
 
@@ -72,6 +73,8 @@
 
             img {
                 width: 100%;
+                box-shadow:  0.1rem 0.9rem 4rem $colorWhite;
+
             }
 
             p {
@@ -170,8 +173,10 @@
                 }
 
             }
-            div{
-                width: 65vw;   /* !!! Vorsicht sonst horizontal-scroll */
+
+            div {
+                width: 65vw;
+                /* !!! Vorsicht sonst horizontal-scroll */
                 max-height: 410vh;
 
                 height: 320%;

@@ -48,6 +48,7 @@
 }
 .detailsItem section:nth-of-type(2) article img {
   width: 100%;
+  box-shadow: 0.1rem 0.9rem 4rem #FFFFFF;
 }
 .detailsItem section:nth-of-type(2) article p {
   padding: 1rem 0;
@@ -114,7 +115,8 @@
     padding-top: 1rem;
   }
   .detailsItem section:nth-of-type(2) div {
-    width: 65vw; /* !!! Vorsicht sonst horizontal-scroll */
+    width: 65vw;
+    /* !!! Vorsicht sonst horizontal-scroll */
     max-height: 410vh;
     height: 320%;
   }
