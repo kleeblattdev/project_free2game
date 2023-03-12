@@ -20,6 +20,7 @@ const GameItemNoDescription = (props) => {
 
         <h3>{props.title}</h3>
         <Link className="readMoreLink" to={`/detailview/${props.id}`}>Read More</Link>
+        <div className="borderLine"></div>
         </article>
 
        <article>

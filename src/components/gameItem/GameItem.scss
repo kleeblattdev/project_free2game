@@ -36,7 +36,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.2rem;
-            border-bottom: 2px solid white;
+/*             border-bottom: 2px solid white; */
 
             h3{
                 text-align: center;
@@ -44,6 +44,15 @@
             }
             p{
                 height: 8rem;
+            }
+            a{
+                margin-bottom: 2rem;
+            }
+            .borderLine{
+                height: 1px;
+                width: 16rem;
+                background-color: $colorGrey;
+                
             }
     }
 
