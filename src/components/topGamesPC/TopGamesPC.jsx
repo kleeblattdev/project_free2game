@@ -21,7 +21,9 @@ const TopGamesPC = () => {
     },[])
     return ( 
         
-        <section className="topGamesPc">
+        <>
+        <p className="sectionTitle">Top recent PC Games</p>
+                <section className="topGamesPc">
             <div className="firstGame">
                 <p className="number1">1</p>
                 <div className="title1">
@@ -76,6 +78,8 @@ const TopGamesPC = () => {
             <Link to={'/allgames'}><button>SHOW MORE</button></Link>
 
         </section> 
+        </>
+
     );
 }
 
