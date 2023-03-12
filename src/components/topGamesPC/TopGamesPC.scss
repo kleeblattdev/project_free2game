@@ -117,3 +117,23 @@
 }
     
 
+@media only screen and (max-width: 850px){
+.topGamesPc{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, .5fr);
+    grid-template-areas: 
+    "big"
+    "small1"
+    "small2"
+    "small3"
+    ;
+
+        .firstGame{
+
+            .number1{
+                left: 2%;
+            }
+        }
+    }
+
+}
