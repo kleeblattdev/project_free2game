@@ -19,7 +19,7 @@
     }
             .number{
             position: absolute;
-            left: 59%;
+            /* left: 55%; */
             margin-top: .5rem;
             border: 1px solid $colorRed;
             background-color: $colorMidnightBlue;
@@ -40,7 +40,7 @@
         .number1{
             position: absolute;
             left: 80%;
-            top: 2%;
+            top: 1.8%;
             /* font-size: 1.5rem; */
             background-color: $colorMidnightBlue;
             padding: .1rem;
@@ -63,6 +63,7 @@
         }
     }
     .secondGame{
+        position: relative;
         display: flex;
         background-color: $colorMidnightBlue;
         grid-area: small1;
@@ -73,6 +74,7 @@
 
     }
     .thirdGame{
+        position: relative;
         display: flex;
         background-color: $colorMidnightBlue;
         grid-area: small2;
@@ -82,6 +84,7 @@
         }
     }
     .fourthGame{
+        position: relative;
         display: flex;
         background-color: $colorMidnightBlue;
         grid-area: small3;
