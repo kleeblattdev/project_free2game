@@ -1,6 +1,7 @@
 @import "../../variables.scss";
 
 .topGamesPc{
+    margin-bottom: 5rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -19,25 +20,34 @@
         }
     }
     .secondGame{
+        display: flex;
         background-color: $colorMidnightBlue;
         grid-area: small1;
         img{
             height: 100%;
+            width: 60%;
         }
     }
     .thirdGame{
+        display: flex;
         background-color: $colorMidnightBlue;
         grid-area: small2;
                 img{
             height: 100%;
+            width: 60%;
         }
     }
     .fourthGame{
+        display: flex;
         background-color: $colorMidnightBlue;
         grid-area: small3;
                 img{
             height: 100%;
+            width: 60%;
         }
+    }
+    .logoSection{
+        display: flex;
     }
 }
     

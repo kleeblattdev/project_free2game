@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import GameItemNoDescription from "../gameItemNoDescription/GameItemNoDescription";
 import { v4 as uuidv4 } from 'uuid';
+import { Link } from "react-router-dom";
 import "./TopGamesPC.scss"
+import windowsLogo from "../../image/windows_Logo.png"
 
 const TopGamesPC = () => {
     
@@ -14,26 +16,51 @@ const TopGamesPC = () => {
         .then(data => {
             
             setRecentData(data.slice(0,limiter))
-            console.log(data[0]?.thumbnail)
+            console.log(data[0])
         })
     },[])
     return ( 
         <section className="topGamesPc">
 
             <div className="firstGame">
+                <p>{recentData[0]?.title}</p>
                 <img src={recentData[0]?.thumbnail} alt="" />
             </div>
             
             <div className="secondGame">
                 <img src={recentData[1]?.thumbnail} alt="" />
+                <div>
+                <p>{recentData[1]?.title}</p>
+                <Link>READ MORE</Link>
+                <div className="logoSection">
+                    <img src={windowsLogo} alt="windows" />
+                    <p>{recentData[1]?.genre}</p>
+                </div>
+                </div>
             </div>
             
             <div className="thirdGame">
                 <img src={recentData[2]?.thumbnail} alt="" />
+                <div>
+                <p>{recentData[2]?.title}</p>
+                <Link>READ MORE</Link>
+                <div className="logoSection">
+                    <img src={windowsLogo} alt="windows" />
+                    <p>{recentData[2]?.genre}</p>
+                </div>
+                </div>
             </div>
             
             <div className="fourthGame">
                 <img src={recentData[3]?.thumbnail} alt="" />
+                <div>
+                <p>{recentData[3]?.title}</p>
+                <Link>READ MORE</Link>
+                <div className="logoSection">
+                    <img src={windowsLogo} alt="windows" />
+                    <p>{recentData[3]?.genre}</p>
+                </div>
+                </div>
             </div>
             
             
