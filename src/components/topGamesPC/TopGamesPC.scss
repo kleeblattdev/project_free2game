@@ -3,8 +3,8 @@
     margin-bottom: 2rem;
 }
 .topGamesPc{
-
-    margin-bottom: 6rem;
+    /* height: 10rem; */
+    margin-bottom: 10rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -42,6 +42,7 @@
         }
 
     .firstGame{
+        
         position: relative;
         grid-area: big;
         img{
