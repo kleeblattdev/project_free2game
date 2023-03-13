@@ -1,75 +1,124 @@
-/* library import */
-import {useState} from "react"
-import { v4 as uuidv4 } from 'uuid'
+import { useState } from "react";
+import { v4 } from "uuid";
 
-//data import
-import platform from "../data/PlatformData"
-import genre from "../data/GenreData"
-import sortBy from "../data/SortByData"
-
-/* component import */
-import DropDownItem from './DropDownItem'
-
-/* SCSS import */
 import "./DropDownFilter.scss"
 
 const DropDownFilter = () => {
-    const [getPlatform, setGetPlatform]=useState("")
-    const [getGenre, setGetGenre]=useState("")
-    const [getSortBy, setGetSortBy]=useState("")
 
-    function handlePlatform(){
-        setGetPlatform(platform.value)
-    }
+        const [expandPlatform,setExpandPlatform] = useState(false)
+        const [expandGenre,setExpandGenre] = useState(false)
+        const [expandSort,setExpandSort] = useState(false)
+        
+        const [platform,setPlatform] = useState()
 
-    function handleGenre(event){
-        setGetGenre(event.target.value)
-    }
+        const platformObject = [
+            {name: "All Platforms",value:"all"},
+            {name: "Windows(PC)" ,value:"pc"},
+            {name: "browser" ,value:"browser"}
+        ]
 
-    function handleSortBy(event){
-        setGetSortBy(event.target.value)
-    }
+        const genreArray =[
+        "mmorpg",
+        "shooter",
+        "strategy",
+        "moba",
+        "racing",
+        "sports",
+        "social",
+        "sandbox",
+        "open-world",
+        "survival",
+        "pvp",
+        "pve",
+        "pixel",
+        "voxel",
+        "zombie", 
+        "turn-based", 
+        "first-person",
+        "third-Person",
+        "top-down",
+        "tank",
+        "space",
+        "sailing",
+        "side-scroller",
+        "superhero",
+        "permadeath",
+        "card",
+        "battle-royale",
+        "mmo",
+        "mmofps",
+        "mmotps",
+        "3d",
+        "2d",
+        "anime",
+        "fantasy",
+        "sci-fi",
+        "fighting",
+        "action-rpg",
+        "action",
+        "military",
+        "martial-arts",
+        "flight",
+        "low-spec",
+        "tower-defense",
+        "horror",
+        "mmorts",
 
-    console.log(getPlatform, getGenre, getSortBy)
-    
-    return (
-    <section className="dropDownFilter">
-        <label htmlFor="platform">
-            <select name="platform" id="platform" multiple={true} onChange={handlePlatform}>
-                {platform.map((platform)=>{
-                    return (<DropDownItem
-                    key={uuidv4()}
-                    value={platform.value}
-                    label={platform.label}
-                    />
-                    )
-                })}
-            </select>
-        </label>
-        <label htmlFor="genre">
-            <select name="genre" id="genre" multiple={true} onChange={handleGenre}>
-                {genre.map((genre)=>{
-                    return (<DropDownItem
-                        key={uuidv4()}
-                        value={genre.value}
-                        label={genre.label}
-                        />)
-                })}
-            </select>
-        </label>
-        <label htmlFor="sortBy">
-            <select name="sortBy" id="sortBy" multiple={true} onChange={handleSortBy}>
-                {sortBy.map((sortBy)=>{
-                    return (<DropDownItem
-                        key={uuidv4()}
-                        value={sortBy.value}
-                        label={sortBy.label}
-                        />)
-                })}
-            </select>
-        </label>
-    </section>
-    );
+]
+        const sortByArray = [" release-date","popularity","alphabetical","relevance"]
+
+    return ( 
+        <div className="DropDownFilter">
+            <div>
+            <button onClick={() => setExpandPlatform(!expandPlatform)} className="listTitle">PLATFORM</button>     
+            {expandPlatform && platformObject.map((item) => {
+                
+                console.log(item)
+                
+                return(
+                    
+                    <div key={v4()} className="filterItem">
+                        <input  type="checkbox" value={item.value} />
+                        <p>{item.name}</p>
+                    </div>
+
+                )
+            })}
+            </div>
+            <div>
+            <button onClick={() => setExpandGenre(!expandGenre)} className="listTitle">GENRE/TAG</button>
+            {expandGenre && genreArray.map((item) => {
+                
+                console.log(item)
+                
+                return(
+                    
+                    <div key={v4()} className="filterItem">
+                        <input  type="checkbox" value={item} />
+                        <p>{item}</p>
+                    </div>
+
+                )
+            })}
+            </div>
+            <div>
+            <button onClick={() => setExpandSort(!expandSort)} className="listTitle">SORT BY</button>
+            {expandSort && sortByArray.map((item) => {
+                
+                console.log(item)
+                
+                return(
+                    
+                    <div key={v4()} className="filterItem">
+                        <input  type="checkbox" value={item} />
+                        <p>{item}</p>
+                    </div>
+
+                )
+            })}
+            </div>
+        </div>
+     );
 }
-
-export default DropDownFilter;
+ 
+export default DropDownFilter
