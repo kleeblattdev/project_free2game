@@ -1,5 +1,4 @@
 let genre =[
-    {value:"", label: "Genre/ Tag"},
     {value: "mmorpg", label: "mmorpg"},
     {value: "shooter", label: "shooter"},
     {value: "strategy", label: "strategy"},

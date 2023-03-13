@@ -6,43 +6,15 @@ import {useState} from "react"
 /* SCSS import */
 import "./DropDownItem.scss"
 
-const DropDownItem = ({value, label}) => {
-    const [userFilter, setUserFilter] = useState({
-        platform:[],
-        genre:[],
-        sortBy:[],
-        response:[],
-    })
-
-/*     let array = []
-    console.log(array) */
-
-
+const DropDownItem = ({value, label, setState, state, props}) => {
+    /* console.log(state) */
+    /* console.log(setState) */
+   /*  console.log(data) */
     const handleChange = (event) =>{
-        const {value, checked} = event.target
-        const {platform, genre, sortBy} = userFilter
-
-        console.log(`${value} is ${checked}`)
-
-        if (checked) {
-            setUserFilter({
-                platform:[...platform, value],
-                genre:[...genre, value],
-                sortBy: [...sortBy,value],
-                response: [...platform,value]
-            })}
-
-        else{
-            setUserFilter({
-                platform: platform.filter((event)=> event !== value),
-                genre: genre.filter((event)=> event !== value),
-                sortBy: sortBy.filter((event)=> event !== value),
-                response: platform.filter((event)=> event !== value) && genre.filter((event)=> event !== value) && sortBy.filter((event)=> event !== value),
-            })
-        }
-        
-    }
-    
+        console.log(event.target.value)
+        const value = event.target.value
+        props.setState(prev => { return [...prev, {value: value}]})
+}
     return ( 
         <>
         <label htmlFor={label}className="DropDownItem">{label}
