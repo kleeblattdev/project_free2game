@@ -3,10 +3,11 @@
     margin-bottom: 2rem;
 }
 .topGamesPc{
-    margin-bottom: 6rem;
+    /* height: 10rem; */
+    margin-bottom: 10rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 10rem);
     grid-template-areas: 
     "big small1"
     "big small2"
@@ -29,7 +30,7 @@
     }
             .number{
             position: absolute;
-            /* left: 55%; */
+            left: 2%;
             margin-top: .5rem;
             border: 1px solid $colorRed;
             background-color: $colorMidnightBlue;
@@ -41,16 +42,20 @@
         }
 
     .firstGame{
+
         position: relative;
         grid-area: big;
         img{
             height: 100%;
             width: 100%;
         }
+        .gameLogo{
+            border-radius: 20px;
+        }
         .number1{
             position: absolute;
-            left: 80%;
-            top: 1.8%;
+            left: 90%;
+            top: 1.2%;
             /* font-size: 1.5rem; */
             background-color: $colorMidnightBlue;
             padding: .1rem;
@@ -69,16 +74,37 @@
             flex-direction: column;
             justify-content: space-between;
 
+            .button{
+                width: 48%;
+                margin-bottom: 1rem;
+            }
+
+            .bigTitle1{
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: .5rem;
+            }
+
             img{
                 width:1.75rem ;
             }
             div{
                 display: flex;
-                justify-content: space-between;
+                
+                
+                        .genre{
+                border: 1px solid $colorRed;
+                border-radius: 20px;
+                padding-left: .4rem;
+                padding-right: .4rem;
+                background-color: $colorMidnightBlue;
+                margin-left: 1rem;
+        }
             }
         }
     }
     .secondGame{
+        border-radius: 20px;
         position: relative;
         display: flex;
         background-color: $colorMidnightBlue;
@@ -86,10 +112,15 @@
         img{
             height: 100%;
             width: 60%;
+            /* border-radius: 20px; */
+        }
+        .gameLogo{
+            border-radius:20px;
         }
 
     }
     .thirdGame{
+        border-radius: 20px;
         position: relative;
         display: flex;
         background-color: $colorMidnightBlue;
@@ -97,9 +128,14 @@
                 img{
             height: 100%;
             width: 60%;
+
+        }
+                .gameLogo{
+            border-radius:20px;
         }
     }
     .fourthGame{
+        border-radius: 20px;
         position: relative;
         display: flex;
         background-color: $colorMidnightBlue;
@@ -107,6 +143,10 @@
                 img{
             height: 100%;
             width: 60%;
+
+        }
+                .gameLogo{
+            border-radius:20px;
         }
     }
     .logoSection{
@@ -114,6 +154,12 @@
         justify-content: space-between;
         img{
             width: 1.75rem;
+        }
+        .genre{
+            border: 1px solid $colorRed;
+            border-radius: 20px;
+            padding-left: .4rem;
+            padding-right: .4rem;
         }
     }
             button{
