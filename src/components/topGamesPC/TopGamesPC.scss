@@ -16,11 +16,12 @@
     gap:.5rem;
     .description{
         padding-left: 3rem;
-        padding-top: 2rem;
+        padding-top: 1rem;
         padding-bottom:2rem ;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap:10px;
     }
 
     .button{
@@ -164,7 +165,7 @@
     }
             button{
             position: absolute;
-            right: 1.75rem;
+            right: 25px;
             margin-top: 1rem;
         }
 }
