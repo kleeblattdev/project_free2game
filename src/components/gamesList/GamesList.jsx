@@ -1,5 +1,5 @@
 /* library import */
-import {useState, useEffect} from "react"
+import { useState, useEffect } from "react"
 import { v4 as uuidv4 } from 'uuid'
 
 /* SCSS import */
@@ -10,49 +10,83 @@ import GameItemNoDescription from "../gameItemNoDescription/GameItemNoDescriptio
 
 const GamesList = () => {
 
-    const [games, setGames]=useState([])
+    const [games, setGames] = useState([])
 
-    useEffect(() =>{
+    useEffect(() => {
         fetch("https://www.freetogame.com/api/games")
-        .then(respone => respone.json())
-        .then(data =>{
-            setGames(data)
-        })
-    },[])
+            .then(respone => respone.json())
+            .then(data => {
+                setGames(data)
+            })
+    }, [])
 
     const [searchTerm, setSearchTerm] = useState("")
-    
-    function searchGame(event){
+    let [gameSearch, setGameSearch] = useState(0)
+
+
+    function searchGame(event) {
         setSearchTerm(event.target.value)
+        setGameSearch(true)
     }
 
 
-    return ( 
+    const [getPageErweitern, setPageErweitern] = useState(1)
+    useEffect(() => {
+        const mehrGames = () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+                setPageErweitern(getPageErweitern + 1);
+            }
+        };
+        window.addEventListener("scroll", mehrGames);
+        return () => { window.removeEventListener("scroll", mehrGames) }
+    }, [getPageErweitern])
+
+    const gamesAllSearch = [...games]
+    const gamesMax10 = [...games]
+    const gamesMax10St = gamesMax10.slice(0, getPageErweitern * 10)
+    console.log(gamesMax10St)
+
+
+
+
+
+    return (
         <>
-        <input type="search" name="search" id="search" onChange={searchGame}/>
-        <section className="gamesList">
-            {games && games.map((games) =>{
-                if(searchTerm){
-                    if(games.title.includes(searchTerm)){
-                        return ( <GameItemNoDescription
-                            key ={uuidv4()}
-                            title ={games.title}
-                            img ={games.thumbnail}
-                            id ={games.id}
-                            genre ={games.genre}
+            <input type="search" name="search" id="search" onChange={searchGame} />
+            <section className="gamesList">
+                {gameSearch === true
+
+                    ?
+
+                    (gamesAllSearch && gamesAllSearch.map((games) => {
+                        console.log("suche")
+                        if (games.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                            return (<GameItemNoDescription
+                                key={uuidv4()}
+                                title={games.title}
+                                img={games.thumbnail}
+                                id={games.id}
+                                genre={games.genre}
                             />)
-                    }else{
-                        gameSearch =false;
+                        } else {
+                            
+                        }
                     }
-                }else return <GameItemNoDescription
-                key ={uuidv4()}
-                title ={games.title}
-                img ={games.thumbnail}
-                id ={games.id}
-                genre ={games.genre}
-                />
-            })}
-        </section>
+                    ))
+                    :
+                    (gamesMax10St && gamesMax10St.map((games) => {
+                        console.log("max10St")
+                        return <GameItemNoDescription
+                            key={uuidv4()}
+                            title={games.title}
+                            img={games.thumbnail} 
+                            id={games.id}
+                            genre={games.genre}
+                        />
+                    }))
+                }
+
+            </section>
         </>
     );
 }
