@@ -21,6 +21,7 @@ const DropDownFilter = () => {
     return (
     <section className="dropDownFilter">
         <div id="platform">
+            <button onClick={handleClick}>Platform</button>
             {platform.map((platform)=>{
                 return <DropDownItem
                 key = {uuidv4()}
@@ -30,6 +31,7 @@ const DropDownFilter = () => {
             })}
         </div>
         <div id="genre">
+        <button onClick={handleClick}>Genre</button>
             {genre.map((genre)=>{
                 return <DropDownItem
                 key = {uuidv4()}
@@ -39,6 +41,7 @@ const DropDownFilter = () => {
             })}
         </div>
         <div id="sortBy">
+            <button onClick={handleClick} >Sort By</button>
             {sortBy.map((sortBy)=>{
                 return <DropDownItem
                 key = {uuidv4()}

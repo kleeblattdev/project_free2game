@@ -1,6 +1,8 @@
 /* library import */
 import {useState} from "react"
 
+/* component import */
+
 /* SCSS import */
 import "./DropDownItem.scss"
 
@@ -11,6 +13,9 @@ const DropDownItem = ({value, label}) => {
         sortBy:[],
         response:[],
     })
+
+/*     let array = []
+    console.log(array) */
 
 
     const handleChange = (event) =>{
@@ -24,7 +29,7 @@ const DropDownItem = ({value, label}) => {
                 platform:[...platform, value],
                 genre:[...genre, value],
                 sortBy: [...sortBy,value],
-                response: [...platform,...genre,...sortBy,value]
+                response: [...platform,value]
             })}
 
         else{
@@ -32,13 +37,12 @@ const DropDownItem = ({value, label}) => {
                 platform: platform.filter((event)=> event !== value),
                 genre: genre.filter((event)=> event !== value),
                 sortBy: sortBy.filter((event)=> event !== value),
-                response: platform.filter((event)=> event !== value) &&genre.filter((event)=> event !== value)&& sortBy.filter((event)=> event !== value),
+                response: platform.filter((event)=> event !== value) && genre.filter((event)=> event !== value) && sortBy.filter((event)=> event !== value),
             })
         }
-
-        console.log(userFilter.response)
+        
     }
-
+    
     return ( 
         <>
         <label htmlFor={label}className="DropDownItem">{label}
