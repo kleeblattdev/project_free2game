@@ -1,7 +1,6 @@
 /* library import */
 import {useState} from "react"
 import { v4 as uuidv4 } from 'uuid'
-import Select from 'react-select'
 
 //data import
 import platform from "../data/PlatformData"
@@ -68,13 +67,6 @@ const DropDownFilter = () => {
                         />)
                 })}
             </select>
-        </label>
-        <label htmlFor="test">
-            <Select
-            coloseMenuOnSelect={false} 
-            options={platform}
-            isMulti
-            onChange={handlePlatform}/>
         </label>
     </section>
     );

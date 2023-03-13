@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid'
 import "./GamesList.scss"
 
 /* component import */
-import GameItem from "../gameItem/GameItem"
+import GameItemNoDescription from "../gameItemNoDescription/GameItemNoDescription"
 
 const GamesList = () => {
 
@@ -26,7 +26,6 @@ const GamesList = () => {
         setSearchTerm(event.target.value)
     }
 
-    let gameSearch = true;
 
     return ( 
         <>
@@ -35,7 +34,7 @@ const GamesList = () => {
             {games && games.map((games) =>{
                 if(searchTerm){
                     if(games.title.includes(searchTerm)){
-                        return ( <GameItem
+                        return ( <GameItemNoDescription
                             key ={uuidv4()}
                             title ={games.title}
                             img ={games.thumbnail}
@@ -45,7 +44,7 @@ const GamesList = () => {
                     }else{
                         gameSearch =false;
                     }
-                }else return <GameItem
+                }else return <GameItemNoDescription
                 key ={uuidv4()}
                 title ={games.title}
                 img ={games.thumbnail}
@@ -53,9 +52,6 @@ const GamesList = () => {
                 genre ={games.genre}
                 />
             })}
-            {!gameSearch && (
-				<h5>This Game does not exist.</h5>
-			)}
         </section>
         </>
     );

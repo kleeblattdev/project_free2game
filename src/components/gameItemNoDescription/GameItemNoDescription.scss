@@ -18,17 +18,18 @@
         .platformLogo{
             width: 2rem;
             height: 2rem;
-            
+            margin-bottom: 2rem; 
         }
             p{
             border: 1px solid $colorRed;
             border-radius: 20px;
             padding: .5rem;
             text-align: center;
+            margin-bottom: 2rem; 
         }
     }
 
-    
+
 
     .gameCard{
             display: flex;
@@ -36,7 +37,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.2rem;
-            height: 10rem;
+            height: 11rem;
 
             h3{
                 text-align: center;
@@ -55,15 +56,12 @@
                 height: 1px;
                 width: 16rem;
                 background-color: $colorGrey;
-                
+
             }
 
-            
+
     }
 
-    h1 {
-        color: $colorWhite;
-    }
 
     .readMoreLink{
         color: $colorWhite;
@@ -73,7 +71,7 @@
         border-radius: 10px;
         width: 45%;
         text-align: center;
-        
+
     }
 
 
