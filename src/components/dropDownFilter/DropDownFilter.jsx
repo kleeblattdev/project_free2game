@@ -9,7 +9,12 @@ const DropDownFilter = () => {
         const [expandGenre,setExpandGenre] = useState(false)
         const [expandSort,setExpandSort] = useState(false)
         
+        /* default values for all games render */
         const [platform,setPlatform] = useState()
+        const [sortBy,setSortBy] = useState()
+
+/*         console.log(platform)
+        console.log(sortBy) */
 
         const platformObject = [
             {name: "All Platforms",value:"all"},
@@ -66,19 +71,20 @@ const DropDownFilter = () => {
 
 ]
         const sortByArray = [" release-date","popularity","alphabetical","relevance"]
+        
+
 
     return ( 
         <div className="DropDownFilter">
             <div>
             <button onClick={() => setExpandPlatform(!expandPlatform)} className="listTitle">PLATFORM</button>     
-            {expandPlatform && platformObject.map((item) => {
+            {expandPlatform && platformObject.map((item,index) => {
                 
-                console.log(item)
                 
                 return(
                     
                     <div key={v4()} className="filterItem">
-                        <input  type="checkbox" value={item.value} />
+                        <input onChange={() => setPlatform(item.value)} type="radio" value={item.value}  name={index}/>
                         <p>{item.name}</p>
                     </div>
 
@@ -89,12 +95,12 @@ const DropDownFilter = () => {
             <button onClick={() => setExpandGenre(!expandGenre)} className="listTitle">GENRE/TAG</button>
             {expandGenre && genreArray.map((item) => {
                 
-                console.log(item)
                 
+
                 return(
                     
                     <div key={v4()} className="filterItem">
-                        <input  type="checkbox" value={item} />
+                        <input  type="radio" value={item} />
                         <p>{item}</p>
                     </div>
 
@@ -105,12 +111,12 @@ const DropDownFilter = () => {
             <button onClick={() => setExpandSort(!expandSort)} className="listTitle">SORT BY</button>
             {expandSort && sortByArray.map((item) => {
                 
-                console.log(item)
+                
                 
                 return(
                     
                     <div key={v4()} className="filterItem">
-                        <input  type="checkbox" value={item} />
+                        <input onChange={() => setSortBy(item)} type="radio" value={item} name="sort" />
                         <p>{item}</p>
                     </div>
 
