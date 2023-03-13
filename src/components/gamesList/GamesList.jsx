@@ -41,8 +41,6 @@ const GamesList = () => {
                             id ={games.id}
                             genre ={games.genre}
                             />)
-                    }else{
-                        gameSearch =false;
                     }
                 }else return <GameItemNoDescription
                 key ={uuidv4()}
