@@ -8,7 +8,6 @@ import RecentlyAdded from "./pages/RecentlyAdded"
 import DetailView from "./pages/DetailView"
 
 /* component import */
-import Navbar from "./components/navbar/Navbar"
 import Header from "./components/header/Header"
 
 /* SCSS import */
@@ -21,6 +20,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Header/>
+
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/allgames' element={<AllGames />}/>

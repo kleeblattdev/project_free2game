@@ -1,5 +1,5 @@
 /* library import */
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { useState } from "react"
 
 /* import SCSS */
@@ -7,9 +7,9 @@ import "./NavButton.scss";
 
 const NavButton = ({link, icon, text,classname}) => {
     const [isActive, setActive] = useState(false)
-    const [homeButton,setHomeButton] = useState(false)
-    const [gamesButton,setGamesButton] = useState(false)
-    const [recentlyButton,setRecentlyButton] = useState(false)
+
+
+    
 
     const handleClick = () => {
         setActive(!isActive)
@@ -17,8 +17,8 @@ const NavButton = ({link, icon, text,classname}) => {
 
     return ( 
         <>
-        <Link to={link} className={classname} id={icon} onClick={() => setHomeButton(true) && setGamesButton(false) && setRecentlyButton(false) }><p>{text}
-            </p></Link>
+        <NavLink to={link} className={isActive? "navButton redBg":"navButton"} id={icon}><p>{text}</p></NavLink>
+
         </>
     );
 }

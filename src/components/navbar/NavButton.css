@@ -1,0 +1,20 @@
+/* color-scheme
+#FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
+*/
+.navButton {
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 15px;
+  margin-bottom: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+}
+.navButton p {
+  width: 100px;
+  margin: 10px 70px;
+}
+
+.active {
+  background-color: #FF4654;
+}/*# sourceMappingURL=NavButton.css.map */

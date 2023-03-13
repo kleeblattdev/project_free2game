@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 /* SCSS import */
 import "./Navbar.scss"
 
-const Navbar = () => {
+const Navbar = (props) => {
     function openNav() {
         document.querySelector("nav").style.width = "200px";
         document.querySelector("header").style.marginLeft = "200px";

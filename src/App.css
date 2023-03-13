@@ -1,0 +1,85 @@
+/* font-family
+font-family: 'Oswald', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+ */
+@font-face {
+  font-family: "Oswald";
+  src: url(./fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url(./fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(./fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf);
+}
+/* Varibales import */
+/* color-scheme
+#FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
+*/
+/* Global Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #040F14;
+  color: #FFFFFF;
+  transition: all 0.5s;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-variation-settings: 800;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-variation-settings: 800;
+  font-size: 1.5rem;
+}
+
+h3, button, li, input[type=text], option {
+  font-family: "Oswald", sans-serif;
+  font-variation-settings: 800;
+  font-size: 1.1rem;
+}
+
+p {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1rem;
+}
+
+a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+main {
+  padding: 50px 25px 0 50px;
+  margin-left: 80px;
+}
+
+button {
+  width: 7rem;
+  padding: 0.5rem;
+  margin-left: auto;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  background-color: #FF4654;
+  cursor: pointer;
+}
+button:hover {
+  scale: 1.2;
+  transition: 0.5s;
+  border-radius: 30px;
+  color: greenyellow;
+}/*# sourceMappingURL=App.css.map */

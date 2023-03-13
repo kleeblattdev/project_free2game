@@ -1,0 +1,21 @@
+/* color-scheme
+#FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
+*/
+#platform, #genre, #sortBy {
+  color: #FFFFFF;
+  background-color: #102130;
+  border: none;
+  border-radius: 15px;
+  width: 250px;
+}
+
+#platform option:first-of-type, #genre option:first-of-type, #sortBy option:first-of-type {
+  background-color: #FF4654;
+}
+
+#platform option, #genre option, #sortBy option {
+  padding: 12px 24px;
+  background-color: #375470;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=DropDownItem.css.map */

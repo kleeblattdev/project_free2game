@@ -2,7 +2,12 @@
 
 .recentlyList{
     position: relative;
-
+    margin-top: 20px;
+    p{
+        margin-bottom: 2rem;
+        padding-top:1rem;
+    }
+    
     .recentlyListContainer{
     display: flex;
     flex-wrap: wrap;

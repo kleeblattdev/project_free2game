@@ -3,7 +3,7 @@
 import HeroSection from "../components/heroSection/HeroSection"
 import DropDownFilter from "../components/dropDownFilter/DropDownFilter"
 import GamesList from "../components/gamesList/GamesList"
-
+import Navbar from "../components/navbar/Navbar"
 
 /* image import */
 import heroImg from "../image/HeroSection_AllGames.png"
@@ -12,7 +12,7 @@ import NavBarGames from "../components/navBarGames/NavBarGames"
 const AllGames = () => {
     return ( 
         <main>
-            <NavBarGames />
+            <Navbar/>
             <HeroSection img={heroImg} text="All Games"/>
             <DropDownFilter/>
             <GamesList/>

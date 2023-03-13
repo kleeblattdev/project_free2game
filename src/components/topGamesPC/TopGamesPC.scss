@@ -1,3 +1,147 @@
+@import "../../variables.scss";
+.sectionTitle{
+    margin-bottom: 2rem;
+}
 .topGamesPc{
+    margin-bottom: 6rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "big small1"
+    "big small2"
+    "big small3"
+    ;
+    gap:.5rem;
+    .description{
+        padding-left: 3rem;
+        padding-top: 2rem;
+        padding-bottom:2rem ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .button{
+        background-color: $colorRed;
+        border-radius: 10px;
+        padding: .2rem;
+    }
+            .number{
+            position: absolute;
+            /* left: 55%; */
+            margin-top: .5rem;
+            border: 1px solid $colorRed;
+            background-color: $colorMidnightBlue;
+            border-radius: 50%;
+            padding: .1rem;
+            width: 2rem;
+            height: 2rem;
+            text-align: center;
+        }
+
+    .firstGame{
+        position: relative;
+        grid-area: big;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        .number1{
+            position: absolute;
+            left: 80%;
+            top: 1.8%;
+            /* font-size: 1.5rem; */
+            background-color: $colorMidnightBlue;
+            padding: .1rem;
+            width: 2rem;
+            height: 2rem;
+            text-align: center;
+            border: 1px solid $colorRed;
+            border-radius: 500%;
+        }
+        .title1{
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            height: 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            img{
+                width:1.75rem ;
+            }
+            div{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    .secondGame{
+        position: relative;
+        display: flex;
+        background-color: $colorMidnightBlue;
+        grid-area: small1;
+        img{
+            height: 100%;
+            width: 60%;
+        }
+
+    }
+    .thirdGame{
+        position: relative;
+        display: flex;
+        background-color: $colorMidnightBlue;
+        grid-area: small2;
+                img{
+            height: 100%;
+            width: 60%;
+        }
+    }
+    .fourthGame{
+        position: relative;
+        display: flex;
+        background-color: $colorMidnightBlue;
+        grid-area: small3;
+                img{
+            height: 100%;
+            width: 60%;
+        }
+    }
+    .logoSection{
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 1.75rem;
+        }
+    }
+            button{
+            position: absolute;
+            right: 1.75rem;
+            margin-top: 1rem;
+        }
+}
     
+
+@media only screen and (max-width: 850px){
+.topGamesPc{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, .5fr);
+    grid-template-areas: 
+    "big"
+    "small1"
+    "small2"
+    "small3"
+    ;
+
+        .firstGame{
+
+            .number1{
+                left: 2%;
+                padding: .18rem;
+            }
+        }
+    }
+
 }
