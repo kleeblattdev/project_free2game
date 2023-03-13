@@ -7,7 +7,7 @@
     margin-bottom: 10rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 10rem);
     grid-template-areas: 
     "big small1"
     "big small2"
@@ -16,8 +16,8 @@
     gap:.5rem;
     .description{
         padding-left: 3rem;
-        padding-top: 3rem;
-        padding-bottom:3rem ;
+        padding-top: 2rem;
+        padding-bottom:2rem ;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -42,7 +42,7 @@
         }
 
     .firstGame{
-        
+
         position: relative;
         grid-area: big;
         img{
