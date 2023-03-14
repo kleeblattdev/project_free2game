@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { v4 } from "uuid";
+import GameItemNoDescription from "../gameItemNoDescription/GameItemNoDescription";
 
 import "./DropDownFilter.scss"
 
@@ -10,13 +11,15 @@ const DropDownFilter = () => {
         const [expandSort,setExpandSort] = useState(false)
         
         /* default values for all games render */
-        const [platform,setPlatform] = useState()
-        const [sortBy,setSortBy] = useState()
-        const [genre,setGenre] = useState()
+        const [platform,setPlatform] = useState("all")
+        const [sortBy,setSortBy] = useState("release-date")
+        const [genre,setGenre] = useState({
+            value:"",
+            checked:false
+        })
 
-/*         console.log(platform)
-        console.log(sortBy) */
-        console.log(genre)
+        const [gameList,setGameList] = useState([])
+
 
         const platformObject = [
             {name: "All Platforms",value:"all"},
@@ -72,13 +75,34 @@ const DropDownFilter = () => {
         "mmorts",
 
 ]
-        const sortByArray = [" release-date","popularity","alphabetical","relevance"]
-        
+        const sortByArray = [
+            "release-date",
+            "popularity",
+            "alphabetical",
+            "relevance"]
+
+
+            let apiLink = genre.checked ? `https://www.freetogame.com/api/games?platform=${platform}&category=${genre.value}&sort-by=${sortBy}`
+                                        : `https://www.freetogame.com/api/games?platform=${platform}&sort-by=${sortBy}`
+
+            /* console.log(apiLink) */
+
+            useEffect(() => {
+                fetch(`${apiLink}`)
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    data&&setGameList(data)
+                    
+                })
+            },[apiLink])
 
 
     return ( 
+
+        <>
         <div className="DropDownFilter">
-            <div>
+            <div >
             <button onClick={() => setExpandPlatform(!expandPlatform)} className="listTitle">PLATFORM</button>     
             {expandPlatform && platformObject.map((item,index) => {
                 
@@ -93,7 +117,7 @@ const DropDownFilter = () => {
                 )
             })}
             </div>
-            <div>
+            <div className="filterContainer">
             <button onClick={() => setExpandGenre(!expandGenre)} className="listTitle">GENRE/TAG</button>
             {expandGenre && genreArray.map((item,index) => {
                 
@@ -102,7 +126,7 @@ const DropDownFilter = () => {
                 return(
                     
                     <div key={v4()} className="filterItem">
-                        <input onChange={() => setGenre(item)}  type="radio" value={item} name={index} />
+                        <input onChange={() => setGenre({value:item,checked:true})}  type="radio" value={item}  name={index}/>
                         <p>{item}</p>
                     </div>
 
@@ -126,6 +150,23 @@ const DropDownFilter = () => {
             })}
             </div>
         </div>
+        <main className="gameListFilter">
+            {gameList?.map((item) => {
+                console.log(item)
+                return(
+                    <GameItemNoDescription 
+                    img={item.thumbnail}
+                    title={item.title}
+                    platform={item.platform}
+                    id={(item.id).toString()}
+                    genre={item.genre}
+                    key={v4()}
+                    />
+                )
+            })}
+        </main>
+        
+        </>
      );
 }
  

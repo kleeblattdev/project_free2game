@@ -1,8 +1,21 @@
 .DropDownFilter{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 2rem;
+
+    .filterContainer{
+        max-height: 10rem;
+        overflow-y:auto;
+    }
 
     .filterItem{
         display: flex;
     }
+}
+.gameListFilter{
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 24px;
 }
