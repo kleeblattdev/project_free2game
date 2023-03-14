@@ -126,7 +126,7 @@ const DropDownFilter = () => {
                 return(
                     
                     <div key={v4()} className="filterItem">
-                        <input onChange={() => setGenre({value:item,checked:true})}  type="radio" value={item}  name={index}/>
+                        <input onChange={() => setGenre({value:item,checked:true})}  type="checkbox" value={item}  name={index}/>
                         <p>{item}</p>
                     </div>
 
@@ -150,7 +150,7 @@ const DropDownFilter = () => {
             })}
             </div>
         </div>
-        <main className="gameListFilter">
+        <section className="gameListFilter">
             {gameList?.map((item) => {
                 console.log(item)
                 return(
@@ -164,7 +164,7 @@ const DropDownFilter = () => {
                     />
                 )
             })}
-        </main>
+        </section>
         
         </>
      );

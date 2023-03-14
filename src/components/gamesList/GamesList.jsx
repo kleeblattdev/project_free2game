@@ -12,18 +12,18 @@ const GamesList = () => {
 
     const [games, setGames]=useState([])
 
-    useEffect(() =>{
+    const [searchTerm, setSearchTerm] = useState("")
+    
+    function searchGame(event){
+
+        setSearchTerm(event.target.value)
+
         fetch("https://www.freetogame.com/api/games")
         .then(respone => respone.json())
         .then(data =>{
             setGames(data)
         })
-    },[])
-
-    const [searchTerm, setSearchTerm] = useState("")
-    
-    function searchGame(event){
-        setSearchTerm(event.target.value)
+        
     }
 
 
@@ -41,16 +41,8 @@ const GamesList = () => {
                             id ={games.id}
                             genre ={games.genre}
                             />)
-                    }else{
-                        gameSearch =false;
                     }
-                }else return <GameItemNoDescription
-                key ={uuidv4()}
-                title ={games.title}
-                img ={games.thumbnail}
-                id ={games.id}
-                genre ={games.genre}
-                />
+                }
             })}
         </section>
         </>
