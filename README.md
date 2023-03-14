@@ -15,3 +15,10 @@
 - <a href="https://github.com/Mskoop" target="_blank">Mskoop</a>
 
 </hr>
+
+<h2>Challenge</h2>
+
+-Website with an overview of Free Games for Browser or PC
+-Navigate through the website
+-Filteroptions
+-Detailed Game overview
