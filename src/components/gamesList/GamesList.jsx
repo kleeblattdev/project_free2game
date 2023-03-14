@@ -7,6 +7,7 @@ import "./GamesList.scss"
 
 /* component import */
 import GameItemNoDescription from "../gameItemNoDescription/GameItemNoDescription"
+import DropDownFilter from "../dropDownFilter/DropDownFilter"
 
 const GamesList = () => {
 
@@ -14,7 +15,7 @@ const GamesList = () => {
 
     useEffect(() => {
         fetch("https://www.freetogame.com/api/games")
-            .then(respone => respone.json())
+            .then(response => response.json())
             .then(data => {
                 setGames(data)
             })
@@ -41,19 +42,80 @@ const GamesList = () => {
         return () => { window.removeEventListener("scroll", mehrGames) }
     }, [getPageErweitern])
 
+    /*  const gamesAllSearch = [...games]
+     const gamesMax10 = [...games]
+     const gamesMax10St = gamesMax10.slice(0, getPageErweitern * 10)
+     console.log(gamesMax10St) */
+
+
+
+    /************************************************************************************************
+     * 
+     *                Filter
+     * 
+     *************************************************************************************************/
+
+    console.log("FILTER")
+    function handelCheckbox(e) { console.log(e.target.checked) }
+
+
+    const [getCheckedValue, setCheckedValue] = useState("")
+    const [getCheckedValue2, setCheckedValue2] = useState("")
+    const [getCheckedValue3, setCheckedValue3] = useState("")
+    const [getCheckedValuePlatform, setCheckedValuePlatform] = useState("")
+
+    console.log(getCheckedValue)
+
+    const [getGamesFetchFilter, setGamesFetchFilter] = useState([{}])
+    useEffect(() => {
+        fetch(`https://www.freetogame.com/api/filter?tag=${getCheckedValue}.${getCheckedValue2}.${getCheckedValue3}&platform=${getCheckedValuePlatform}`)
+            .then(response => response.json())
+            .then(data => {
+                setGamesFetchFilter(data)
+            })
+    },[getCheckedValue,getCheckedValue2,getCheckedValue3,getCheckedValuePlatform])
+
+    console.log("getGamesFetchFilter")
+    console.log(getGamesFetchFilter)
+
     const gamesAllSearch = [...games]
-    const gamesMax10 = [...games]
+    let gamesMax10 = [...games]
+    if (getGamesFetchFilter.length > 1) {
+        gamesMax10 = getGamesFetchFilter
+    }
+    else { gamesMax10 = [...games] }
     const gamesMax10St = gamesMax10.slice(0, getPageErweitern * 10)
     console.log(gamesMax10St)
-
-
 
 
 
     return (
         <>
             <input type="search" name="search" id="search" onChange={searchGame} />
+
+
+
+
+            <h2>Genre</h2>
+
+            <label htmlFor="strategy">strategy</label>
+            <input onClick={(e) => setCheckedValue(e.target.checked ? e.target.value : "")} type="checkbox" name="strategy" id="strategy" value="strategy" />
+            <label htmlFor="shooter">shooter</label>
+            <input onClick={(e) => setCheckedValue2(e.target.checked ? e.target.value : "")} type="checkbox" name="shooter" id="shooter" value="shooter" />
+            <label htmlFor="mmorpg">mmorpg</label>
+            <input onClick={(e) => setCheckedValue3(e.target.checked ? e.target.value : "")} type="checkbox" name="mmorpg" id="mmorpg" value="mmorpg" />
+
+
+            <h2>Platform</h2>
+            <label htmlFor="pc">pc</label>
+            <input onClick={(e) => setCheckedValuePlatform(e.target.checked ? e.target.value : "all")} type="checkbox" name="pc" id="pc" value="pc" />
+
+
+
+
+
             <section className="gamesList">
+
                 {gameSearch === true
 
                     ?
@@ -68,9 +130,9 @@ const GamesList = () => {
                                 id={games.id}
                                 genre={games.genre}
                             />)
-                        } else {
+                        } /* else {
                             
-                        }
+                        } */
                     }
                     ))
                     :
@@ -79,11 +141,12 @@ const GamesList = () => {
                         return <GameItemNoDescription
                             key={uuidv4()}
                             title={games.title}
-                            img={games.thumbnail} 
+                            img={games.thumbnail}
                             id={games.id}
                             genre={games.genre}
                         />
                     }))
+
                 }
 
             </section>
