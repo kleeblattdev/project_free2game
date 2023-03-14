@@ -18,7 +18,6 @@ const RecentlyList = () => {
         .then(res => res.json())
         .then(data => {
             setGames(data)
-            console.log(data)
         })
     },[])
 
@@ -41,7 +40,6 @@ const RecentlyList = () => {
             
         <section className="recentlyListContainer">
             {gamesMax10St?.map((item) => {
-                /* console.log(item.genre) */
                     return(
                         <GameItemNoDescription 
                         img={item.thumbnail}
