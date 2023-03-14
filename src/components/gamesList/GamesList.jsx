@@ -16,6 +16,7 @@ const GamesList = () => {
     
     function searchGame(event){
         setSearchTerm(event.target.value)
+        setGameSearch(true)
 
         fetch("https://www.freetogame.com/api/games")
             .then(response => response.json())
@@ -23,7 +24,6 @@ const GamesList = () => {
                 setGames(data)
             })
     }
-
 
     const [getPageErweitern, setPageErweitern] = useState(1)
     useEffect(() => {
@@ -38,22 +38,12 @@ const GamesList = () => {
 
     const gamesAllSearch = [...games]
     const gamesMax10 = [...games]
-     const gamesMax10St = gamesMax10.slice(0, getPageErweitern * 10)
-    console.log(gamesMax10St)
-
-/* 
-    const gamesAllSearch = [...games]
-    let gamesMax10 = [...games]
-    if (getGamesFetchFilter.length > 1) {
-        gamesMax10 = getGamesFetchFilter
-    }
-    else { gamesMax10 = [...games] }
     const gamesMax10St = gamesMax10.slice(0, getPageErweitern * 10)
-    console.log(gamesMax10St) */
 
 
     return (
         <>
+            <input type="search" name="search" id="search" onChange={searchGame}/>
             <section className="gamesList">
 
                 {gameSearch === true
