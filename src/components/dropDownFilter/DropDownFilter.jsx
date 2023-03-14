@@ -12,9 +12,11 @@ const DropDownFilter = () => {
         /* default values for all games render */
         const [platform,setPlatform] = useState()
         const [sortBy,setSortBy] = useState()
+        const [genre,setGenre] = useState()
 
 /*         console.log(platform)
         console.log(sortBy) */
+        console.log(genre)
 
         const platformObject = [
             {name: "All Platforms",value:"all"},
@@ -93,14 +95,14 @@ const DropDownFilter = () => {
             </div>
             <div>
             <button onClick={() => setExpandGenre(!expandGenre)} className="listTitle">GENRE/TAG</button>
-            {expandGenre && genreArray.map((item) => {
+            {expandGenre && genreArray.map((item,index) => {
                 
                 
 
                 return(
                     
                     <div key={v4()} className="filterItem">
-                        <input  type="radio" value={item} />
+                        <input onChange={() => setGenre(item)}  type="radio" value={item} name={index} />
                         <p>{item}</p>
                     </div>
 
@@ -109,14 +111,14 @@ const DropDownFilter = () => {
             </div>
             <div>
             <button onClick={() => setExpandSort(!expandSort)} className="listTitle">SORT BY</button>
-            {expandSort && sortByArray.map((item) => {
+            {expandSort && sortByArray.map((item,index) => {
                 
                 
                 
                 return(
                     
                     <div key={v4()} className="filterItem">
-                        <input onChange={() => setSortBy(item)} type="radio" value={item} name="sort" />
+                        <input onChange={() => setSortBy(item)} type="radio" value={item} name={index} />
                         <p>{item}</p>
                     </div>
 
