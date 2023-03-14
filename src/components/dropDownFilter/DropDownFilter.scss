@@ -1,4 +1,6 @@
-.DropDownFilter{
+@import "../../variables.scss";
+
+.dropDownFilter{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -11,12 +13,31 @@
 
     .filterItem{
         display: flex;
+        gap: 5px;
+        background-color: $colorGrey;
+        border-radius: 20px;
+        padding: 5px;
+        margin: 5px;
     }
+
 }
+
 .gameListFilter{
     margin-top: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 24px;
+}
+
+
+.listTitle{
+    width: 7rem;
+    padding: 0.5rem;
+    margin: 0 auto;
+    color: $colorWhite;
+    border: none;
+    border-radius: 10px;
+    background-color: $colorRed;
+    cursor: pointer;
 }

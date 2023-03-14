@@ -101,9 +101,9 @@ const DropDownFilter = () => {
     return ( 
 
         <>
-        <div className="DropDownFilter">
-            <div >
-            <button onClick={() => setExpandPlatform(!expandPlatform)} className="listTitle">PLATFORM</button>     
+        <div className="dropDownFilter">
+            <div className="dropDownContainer">
+                <div onClick={() => setExpandPlatform(!expandPlatform)} className="listTitle">PLATFORM</div>     
             {expandPlatform && platformObject.map((item,index) => {
                 
                 
@@ -118,7 +118,7 @@ const DropDownFilter = () => {
             })}
             </div>
             <div className="filterContainer">
-            <button onClick={() => setExpandGenre(!expandGenre)} className="listTitle">GENRE/TAG</button>
+            <div onClick={() => setExpandGenre(!expandGenre)} className="listTitle">GENRE/TAG</div>
             {expandGenre && genreArray.map((item,index) => {
                 
                 
@@ -134,7 +134,7 @@ const DropDownFilter = () => {
             })}
             </div>
             <div>
-            <button onClick={() => setExpandSort(!expandSort)} className="listTitle">SORT BY</button>
+                <div onClick={() => setExpandSort(!expandSort)} className="listTitle">SORT BY</div>
             {expandSort && sortByArray.map((item,index) => {
                 
                 
