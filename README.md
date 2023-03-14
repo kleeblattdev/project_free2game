@@ -22,3 +22,8 @@
 -Navigate through the website
 -Filteroptions
 -Detailed Game overview
+
+</hr>
+
+<h2>Screenshot</h2>
+<img src="./image/mobile_screenshot.png">
