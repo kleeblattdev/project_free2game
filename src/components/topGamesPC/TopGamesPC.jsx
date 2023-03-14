@@ -1,8 +1,11 @@
+/* library import */
 import { useState, useEffect } from "react";
-import GameItemNoDescription from "../gameItemNoDescription/GameItemNoDescription";
-import { v4 as uuidv4 } from 'uuid';
 import { Link } from "react-router-dom";
+
+/* SCSS import */
 import "./TopGamesPC.scss"
+
+/* image import */
 import windowsLogo from "../../image/windows_Logo.png"
 
 const TopGamesPC = () => {
@@ -14,9 +17,7 @@ const TopGamesPC = () => {
         fetch(`https://www.freetogame.com/api/games?platform=browser&sort-by=release-date&platform=pc`)
         .then(res => res.json())
         .then(data => {
-            
             setRecentData(data.slice(0,limiter))
-            console.log(data[0].thumbnail)
         })
     },[])
     return ( 
