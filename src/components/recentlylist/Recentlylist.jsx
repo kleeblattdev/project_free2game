@@ -20,7 +20,6 @@ const RecentlyList = () => {
         .then(data => {
             /* console.log(data) */
             setRecentData(data.slice(0,limiter))
-            
         })
     },[limiter])
 

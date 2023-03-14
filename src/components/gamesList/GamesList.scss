@@ -11,11 +11,11 @@
 input[type="search"]{
     position: fixed;
     top: 25px;
-    right: 0;
+    right: 20px ;
     border: none;
     background-color: $colorGrey;
     background-image: url("../../image/search.svg");
-    background-position: right;
+    background-position: right ;
     background-repeat: no-repeat;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 50px;
