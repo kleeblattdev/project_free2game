@@ -23,6 +23,7 @@ const GamesList = () => {
             .then(data => {
                 setGames(data)
             })
+            
     }
 
     const gamesAllSearch = [...games]
