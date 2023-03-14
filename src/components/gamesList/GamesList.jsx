@@ -37,7 +37,6 @@ const GamesList = () => {
                 {gameSearch === true?
 
                     (gamesAllSearch && gamesAllSearch.map((games) => {
-                        console.log(gamesAllSearch)
                         if (games.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                             return (<GameItemNoDescription
                                 key={uuidv4()}
