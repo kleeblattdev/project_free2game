@@ -16,7 +16,7 @@ const TopGamesPC = () => {
         .then(data => {
             
             setRecentData(data.slice(0,limiter))
-            console.log(data[0].id)
+            console.log(data[0].thumbnail)
         })
     },[])
     return ( 
