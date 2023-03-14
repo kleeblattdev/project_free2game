@@ -1,0 +1,170 @@
+/* color-scheme
+#FF4654, #040F14, #102130, #375470, #AFC7DF, #FFFFFF
+*/
+.sectionTitle {
+  margin-bottom: 2rem;
+}
+
+.topGamesPc {
+  /* height: 10rem; */
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 10rem);
+  grid-template-areas: "big small1" "big small2" "big small3";
+  gap: 0.5rem;
+}
+.topGamesPc .description {
+  padding-left: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.topGamesPc .button {
+  background-color: #FF4654;
+  border-radius: 10px;
+  padding: 0.2rem;
+}
+.topGamesPc .number {
+  position: absolute;
+  left: 2%;
+  margin-top: 0.5rem;
+  border: 1px solid #FF4654;
+  background-color: #102130;
+  border-radius: 50%;
+  padding: 0.1rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+.topGamesPc .firstGame {
+  position: relative;
+  grid-area: big;
+}
+.topGamesPc .firstGame img {
+  height: 100%;
+  width: 100%;
+}
+.topGamesPc .firstGame .gameLogo {
+  border-radius: 20px;
+}
+.topGamesPc .firstGame .number1 {
+  position: absolute;
+  left: 90%;
+  top: 1.2%;
+  /* font-size: 1.5rem; */
+  background-color: #102130;
+  padding: 0.1rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  border: 1px solid #FF4654;
+  border-radius: 500%;
+}
+.topGamesPc .firstGame .title1 {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.topGamesPc .firstGame .title1 .button {
+  width: 48%;
+  margin-bottom: 1rem;
+}
+.topGamesPc .firstGame .title1 .bigTitle1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.topGamesPc .firstGame .title1 img {
+  width: 1.75rem;
+}
+.topGamesPc .firstGame .title1 div {
+  display: flex;
+}
+.topGamesPc .firstGame .title1 div .genre {
+  border: 1px solid #FF4654;
+  border-radius: 20px;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  background-color: #102130;
+  margin-left: 1rem;
+}
+.topGamesPc .secondGame {
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  background-color: #102130;
+  grid-area: small1;
+}
+.topGamesPc .secondGame img {
+  height: 100%;
+  width: 60%;
+  /* border-radius: 20px; */
+}
+.topGamesPc .secondGame .gameLogo {
+  border-radius: 20px;
+}
+.topGamesPc .thirdGame {
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  background-color: #102130;
+  grid-area: small2;
+}
+.topGamesPc .thirdGame img {
+  height: 100%;
+  width: 60%;
+}
+.topGamesPc .thirdGame .gameLogo {
+  border-radius: 20px;
+}
+.topGamesPc .fourthGame {
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  background-color: #102130;
+  grid-area: small3;
+}
+.topGamesPc .fourthGame img {
+  height: 100%;
+  width: 60%;
+}
+.topGamesPc .fourthGame .gameLogo {
+  border-radius: 20px;
+}
+.topGamesPc .logoSection {
+  display: flex;
+  justify-content: space-between;
+}
+.topGamesPc .logoSection img {
+  width: 1.75rem;
+}
+.topGamesPc .logoSection .genre {
+  border: 1px solid #FF4654;
+  border-radius: 20px;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.topGamesPc button {
+  position: absolute;
+  right: 1.75rem;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 850px) {
+  .topGamesPc {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 0.5fr);
+    grid-template-areas: "big" "small1" "small2" "small3";
+  }
+  .topGamesPc .firstGame .number1 {
+    left: 2%;
+    padding: 0.18rem;
+  }
+}/*# sourceMappingURL=TopGamesPC.css.map */
