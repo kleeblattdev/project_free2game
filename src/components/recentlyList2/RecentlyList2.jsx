@@ -11,23 +11,36 @@ import GameItemNoDescription from "../gameItemNoDescription/GameItemNoDescriptio
 
 const RecentlyList = () => {
 
-    const [recentData, setRecentData] = useState([])
+    const [games, setGames] = useState([])
 
     useEffect(() => {
         fetch(`https://www.freetogame.com/api/games?&sort-by=release-date?&platform=all`)
         .then(res => res.json())
         .then(data => {
-            setRecentData(data)
+            setGames(data)
+            console.log(data)
         })
     },[])
 
+    const [getPageErweitern, setPageErweitern] = useState(1)
+    useEffect(() => {
+        const mehrGames = () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+                setPageErweitern(getPageErweitern + 1);
+            }
+        };
+        window.addEventListener("scroll", mehrGames);
+        return () => { window.removeEventListener("scroll", mehrGames) }
+    }, [getPageErweitern])
 
+    const gamesMax10 = [...games]
+    const gamesMax10St = gamesMax10.slice(0, getPageErweitern * 10)
 
     return ( 
         <section className="recentlyList">
             
         <section className="recentlyListContainer">
-            {recentData?.map((item) => {
+            {gamesMax10St?.map((item) => {
                 /* console.log(item.genre) */
                     return(
                         <GameItemNoDescription 
