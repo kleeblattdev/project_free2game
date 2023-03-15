@@ -1,35 +1,32 @@
-/* components import */
-import NavButton from "./NavButton"
+/* library import */
+import {useState} from "react"
 
 /* SCSS import */
 import "./Navbar.scss"
 
-const Navbar = (props) => {
-    function openNav() {
-        document.querySelector("nav").style.width = "200px";
-        document.querySelector("header").style.marginLeft = "200px";
-        document.querySelector(".menuButton").style.display = "none";
-        document.querySelector(".closeBtn").style.display = "block";
-        document.querySelector(".verticalLine").style.left = "200px";
-    }
-        function closeNav() {
-        document.querySelector("nav").style.width = "70px";
-        document.querySelector("header").style.marginLeft = "0";
-        document.querySelector(".menuButton").style.display = "block";
-        document.querySelector(".closeBtn").style.display = "none";
-        document.querySelector(".verticalLine").style.left = "70px";
+const Navbar = () => {
+    const [navOpen, setNavOpen]=useState(true)
+
+    const handleToggle=(prev)=>{
+        setNavOpen(prev => !prev)
     }
 
     return ( 
-        <nav className="navBar">
-            <div id="menuContainer">
-                <div className="menuButton" onClick={openNav}></div>
-                <div className="closeBtn" onClick={closeNav}></div>
-            </div>
-            <NavButton link="/" icon="home" text="Home"/>
-            <NavButton link="/allgames" icon="games" text="All Games"/>
-            <NavButton link="/recentlyadded" icon="recent" text="Recently Added"/>
-            <div className="verticalLine"/>
+        <nav className={navOpen? "navbar":"showNavbar"}>
+            <div className={navOpen? "burger":"burgerClose"} onClick={handleToggle}></div>
+            <NavLink to="/">
+                <div id="home"></div>
+                <p className={navOpen? "hideText":"showText"}>Home</p>
+            </NavLink>
+            <NavLink to="/allgames">
+                <div id="games"></div>
+                <p className={navOpen? "hideText":"showText"}>All Games</p>
+            </NavLink>
+            <NavLink to="/recentlyadded">
+                <div id="recent"></div>
+                <p className={navOpen? "hideText":"showText"}>Recently Added</p>
+            </NavLink>
+            <div className={navOpen? "verticalLine":"openVerticalLine"}/>
         </nav>
     );
 }

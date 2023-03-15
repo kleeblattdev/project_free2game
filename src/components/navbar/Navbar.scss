@@ -1,6 +1,6 @@
 @import "../../variables.scss";
 
-.navBar{
+.navbar{
 position: fixed;
 height: 100%;
 top: 0;
@@ -13,7 +13,26 @@ overflow-x: hidden;
 transition: 0.5s;
 background-color: $colorBlack;
 width: 70px;
+}
 
+.showNavbar{
+
+}
+.burger{
+
+}
+
+.burgerClose{
+
+}
+
+.hideText{
+
+}
+
+.showText{
+
+}
     #menuContainer{
         position: relative;
         bottom: 300px;
@@ -69,7 +88,7 @@ width: 70px;
         background-image: url("../../image/recentlyadded.svg");
     }
 
-    .verticalLine{
+.verticalLine{
         background-color: $colorWhite;
         width: 1px;
         position: fixed;
@@ -78,6 +97,10 @@ width: 70px;
         left: 70px;
         z-index: 1;
         transition: 0.5s;
-    }
+}
+
+.openVerticalLine{
+    left: 90px;
+    transition: 0.5s;
 }
 
