@@ -13,7 +13,7 @@ import GamesList from "../gamesList/GamesList"
 const Header = () => {
 
     return ( 
-        <header id="header">
+        <header>
             <Link to="/"><img src={Logo} alt="FreeToGame logo" /></Link>
             <GamesList/>
         </header>
