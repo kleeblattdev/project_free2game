@@ -1,13 +1,5 @@
 @import "../../variables.scss";
 
-.gamesList{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    background-color: $colorBlack;
-}
-
 input[type="search"]{
     position: fixed;
     top: 25px;
@@ -21,4 +13,21 @@ input[type="search"]{
     border-radius: 50px;
     margin-right: 10px;
     z-index: 5;
+}
+
+.gamesList{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 2;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    background-color: $colorBlack;
+}
+
+.hideGamesList{
+display: none;
 }

@@ -1,5 +1,5 @@
 /* library import */
-import { useState, useEffect } from "react"
+import { useState, } from "react"
 import { v4 as uuidv4 } from 'uuid'
 
 /* SCSS import */
@@ -11,33 +11,29 @@ import GameItemNoDescription from "../gameItemNoDescription/GameItemNoDescriptio
 const GamesList = () => {
 
     const [games, setGames] = useState([])
-    const [searchTerm, setSearchTerm] = useState("")
-    let [gameSearch, setGameSearch] = useState(false)
+    const [searchTerm, setSearchTerm] = useState()
+    const [handleToggle, setHandleToggle]=useState(false)
     
     function searchGame(event){
         setSearchTerm(event.target.value)
-        setGameSearch(true)
+        if (event.target.value == ""){
+            setHandleToggle(false)
+        }else{
+            setHandleToggle(true)
+        }
 
         fetch("https://www.freetogame.com/api/games")
             .then(response => response.json())
             .then(data => {
                 setGames(data)
             })
-            
     }
-
-    const gamesAllSearch = [...games]
-
 
     return (
         <>
             <input type="search" name="search" id="search" onChange={searchGame}/>
-            <section className="gamesList">
-
-                {gameSearch === true?
-
-                    (gamesAllSearch && gamesAllSearch.map((games) => {
-                        console.log(gamesAllSearch)
+            <section className={`${handleToggle? "gamesList":"hideGamesList"}`}>
+                    {games && games.map((games) => {
                         if (games.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                             return (<GameItemNoDescription
                                 key={uuidv4()}
@@ -48,8 +44,7 @@ const GamesList = () => {
                             />)
                         } 
                     }
-                    ))
-                    : false
+                    )
                 }
         </section>
         </>

@@ -33,7 +33,7 @@ font-family: 'Source Sans Pro', sans-serif;
 body{
     background-color: $colorBlack;
     color: $colorWhite;
-    transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
     max-width: 1440px;
     margin: 0 auto;
 }
