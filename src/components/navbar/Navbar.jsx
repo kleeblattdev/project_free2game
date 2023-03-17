@@ -1,6 +1,9 @@
 /* library import */
 import {useState} from "react"
-import { NavLink } from "react-router-dom"
+import { NavLink,Link } from "react-router-dom"
+
+/* file import */
+import Logo from "../../image/logo.svg"
 
 /* SCSS import */
 import "./Navbar.scss"
@@ -13,6 +16,8 @@ const Navbar = () => {
     }
 
     return ( 
+        <>
+        <Link to="/" className={`${navOpen? "logo":"logoNav"}`}><img src={Logo} alt="FreeToGame logo" /></Link>
         <nav className={`navbar ${navOpen? " ":"showNavbar"}`}>
             <div className={`burger ${navOpen? "":"burgerClose"}`} onClick={handleToggle}>
                 <span></span>
@@ -36,6 +41,7 @@ const Navbar = () => {
                 <div className={`verticalLine ${navOpen? "":"openVerticalLine"}`}/>
             </section>
         </nav>
+        </>
     );
 }
 
