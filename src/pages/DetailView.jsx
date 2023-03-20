@@ -5,10 +5,6 @@ import { useParams } from "react-router-dom";
 /* component import */
 import DetailsItem from "../components/detailsItem/DetailsItem";
 
-import Navbar from "../components/navbar/Navbar"
-/* image import */
-import heroImg from "../image/HeroSection_img.png"
-
 // import fehlerBild 404 wenn API keine Bilder hat
 import fehlerBild from "../image/404_Fehler_2.jpg"
 
@@ -51,7 +47,6 @@ const DetailView = () => {
 
         return (
             <section className="detailView">
-                <Navbar />
                 <DetailsItem
                     imgEins={getData?.screenshots[0]?.image !=null ? getData?.screenshots[0].image : fehlerBild}
                     title={getData?.title}

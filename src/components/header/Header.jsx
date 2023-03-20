@@ -1,9 +1,3 @@
-/* library import */
-import { Link } from "react-router-dom"
-
-/* file import */
-import Logo from "../../image/logo.svg"
-
 /* SCSS import */
 import "./Header.scss"
 
@@ -13,8 +7,7 @@ import GamesList from "../gamesList/GamesList"
 const Header = () => {
 
     return ( 
-        <header id="header">
-            <Link to="/"><img src={Logo} alt="FreeToGame logo" /></Link>
+        <header>
             <GamesList/>
         </header>
     );

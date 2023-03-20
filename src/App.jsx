@@ -9,6 +9,7 @@ import DetailView from "./pages/DetailView"
 
 /* component import */
 import Header from "./components/header/Header"
+import Navbar from "./components/navbar/Navbar"
 
 /* SCSS import */
 import "./App.scss"
@@ -20,7 +21,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Header/>
-
+      <Navbar/>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/allgames' element={<AllGames />}/>
