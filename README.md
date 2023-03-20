@@ -22,6 +22,7 @@
 -Navigate through the website
 -Filteroptions
 -Detailed Game overview
+-Searchbar
 
 </hr>
 
